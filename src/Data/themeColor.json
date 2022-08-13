@@ -1,0 +1,30 @@
+{
+    "dark":[
+        {
+        "background" : "#0a1929",
+        "nav":"#0a1929",
+        "footer":"#001e3c",
+        "questionpage":"#001e3c",
+        "questionpageborder":"1px solid white",
+        "text":"#ffffff",
+        "scrollbar":"#ffffff",
+        "border": "0.5px solid white",
+        "heading":"#00d09c",
+        "checkBoxColor":"#7CFC00"
+        }
+    ],
+    "light":[
+        {
+        "background" : "#ffffff",
+        "nav":"#ffffff",
+        "footer":"#e7ebf0",
+        "questionpage":"#e7ebf0",
+        "questionpageborder":"1px solid black",
+        "text":"#000000",
+        "scrollbar":"#000000",
+        "border": "0.5px solid black",
+        "heading":" #007fff",
+        "checkBoxColor":"#006400"
+        }
+    ]
+}
