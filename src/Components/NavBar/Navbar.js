@@ -101,7 +101,7 @@ function Navbar() {
         "background-color": themeColor[currTheme][0].nav,
       }}
     >
-      <Grid item lg={5} md={10} sm={2} xs={6}>
+      <Grid item lg={5} md={8} sm={6} xs={6}>
         <Wrapper>
           <Title
             color={themeColor[currTheme][0].text}
@@ -113,7 +113,7 @@ function Navbar() {
           </Title>
         </Wrapper>
       </Grid>
-      <Grid item lg={4} md={2} sm={10} xs={6}>
+      <Grid item lg={4} md={4} sm={6} xs={6}>
         <Wrapper>
           <Tooltip title="solve a random question">
             <Random onClick={fun}>
