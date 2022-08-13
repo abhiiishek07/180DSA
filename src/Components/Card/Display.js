@@ -120,15 +120,15 @@ const Display = (props) => {
           padding: "0rem 4rem 0rem",
         }}
       >
-        <Grid item lg={1} md={1} xs={1}>
+        <Grid item lg={1} md={1} sm={1} xs={1}>
           <Wrapper
             bgcolor={themeColor[currTheme][0].questionpage}
             border={themeColor[currTheme][0].questionpageborder}
           >
-            <Topic color={themeColor[currTheme][0].text}>{props.siNo}</Topic>
+            <Logo color={themeColor[currTheme][0].text}>{props.siNo}</Logo>
           </Wrapper>
         </Grid>
-        <Grid item lg={6} md={6} xs={6}>
+        <Grid item lg={6} md={6} sm={4} xs={4} zeroMinWidth>
           <Wrapper
             bgcolor={themeColor[currTheme][0].questionpage}
             border={themeColor[currTheme][0].questionpageborder}
@@ -145,7 +145,7 @@ const Display = (props) => {
             </Topic>
           </Wrapper>
         </Grid>
-        <Grid item lg={2} md={2} xs={2}>
+        <Grid item lg={2} md={2} sm={2.5} xs={2.5}>
           <Wrapper
             bgcolor={themeColor[currTheme][0].questionpage}
             border={themeColor[currTheme][0].questionpageborder}
@@ -161,7 +161,7 @@ const Display = (props) => {
             </Topic>
           </Wrapper>
         </Grid>
-        <Grid item lg={1} md={1} xs={1}>
+        <Grid item lg={1} md={1} sm={1.5} xs={1.5}>
           <WrapperSolved
             bgcolor={themeColor[currTheme][0].questionpage}
             border={themeColor[currTheme][0].questionpageborder}
@@ -179,12 +179,12 @@ const Display = (props) => {
           </WrapperSolved>
           <ToastContainer />
         </Grid>
-        <Grid item lg={1} md={1} xs={1}>
+        <Grid item lg={1} md={1} sm={1.5} xs={1.5}>
           <Wrapper
             bgcolor={themeColor[currTheme][0].questionpage}
             border={themeColor[currTheme][0].questionpageborder}
           >
-            <Topic
+            <Logo
               color={themeColor[currTheme][0].text}
               onClick={handleOpen}
               style={{ cursor: "pointer" }}
@@ -194,7 +194,7 @@ const Display = (props) => {
               ) : (
                 <NoteAddRoundedIcon />
               )}
-            </Topic>
+            </Logo>
             <Modal
               open={open}
               onClose={handleClose}
@@ -235,12 +235,12 @@ const Display = (props) => {
             </Modal>
           </Wrapper>
         </Grid>
-        <Grid item lg={1} md={1} xs={1}>
+        <Grid item lg={1} md={1} sm={1.5} xs={1.5}>
           <Wrapper
             bgcolor={themeColor[currTheme][0].questionpage}
             border={themeColor[currTheme][0].questionpageborder}
           >
-            <Topic color={themeColor[currTheme][0].text}>
+            <Logo color={themeColor[currTheme][0].text}>
               {bookmarkedquestionlist.find((ele) => ele.Q_id === props.id) ? (
                 <BookmarkAddedIcon
                   style={{ cursor: "pointer", color: "green" }}
@@ -252,7 +252,7 @@ const Display = (props) => {
                   onClick={handleAddBookmark}
                 />
               )}
-            </Topic>
+            </Logo>
           </Wrapper>
         </Grid>
       </Grid>
@@ -262,6 +262,14 @@ const Display = (props) => {
 
 const Topic = styled.h3`
   color: ${(props) => props.color};
+  margin: 0rem 0.5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+`;
+const Logo = styled.h3`
+  color: ${(props) => props.color};
+  margin: 0rem 0.5rem;
 `;
 const Wrapper = styled.div`
   display: flex;
@@ -270,7 +278,6 @@ const Wrapper = styled.div`
   background-color: ${(props) => props.bgcolor};
   border: ${(props) => props.border};
   height: 8vh;
-  overflow: hidden;
 `;
 const WrapperSolved = styled.div`
   display: flex;
@@ -283,7 +290,6 @@ const WrapperSolved = styled.div`
   cursor: pointer;
 `;
 const Anchor = styled.a`
-  overflow: hidden;
   text-decoration: ${(props) =>
     props.decoration === "none" ? "none" : "line"};
   color: ${(props) => props.color};

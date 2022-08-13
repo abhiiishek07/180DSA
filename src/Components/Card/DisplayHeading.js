@@ -28,7 +28,7 @@ const DisplayHeading = () => {
             <Topic color={themeColor[currTheme][0].heading}>Q No.</Topic>
           </Wrapper>
         </Grid>
-        <Grid item lg={6} md={6} xs={6}>
+        <Grid item lg={6} md={6} xs={4}>
           <Wrapper
             bgcolor={themeColor[currTheme][0].questionpage}
             border={themeColor[currTheme][0].questionpageborder}
@@ -36,7 +36,7 @@ const DisplayHeading = () => {
             <Topic color={themeColor[currTheme][0].heading}>Question</Topic>
           </Wrapper>
         </Grid>
-        <Grid item lg={2} md={2} xs={2}>
+        <Grid item lg={2} md={2} xs={2.5}>
           <Wrapper
             bgcolor={themeColor[currTheme][0].questionpage}
             border={themeColor[currTheme][0].questionpageborder}
@@ -44,7 +44,7 @@ const DisplayHeading = () => {
             <Topic color={themeColor[currTheme][0].heading}>Solution</Topic>
           </Wrapper>
         </Grid>
-        <Grid item lg={1} md={1} xs={1}>
+        <Grid item lg={1} md={1} xs={1.5}>
           <Tooltip title="check the box when solved/unsolved">
             <Wrapper
               bgcolor={themeColor[currTheme][0].questionpage}
@@ -56,7 +56,7 @@ const DisplayHeading = () => {
             </Wrapper>
           </Tooltip>
         </Grid>
-        <Grid item lg={1} md={1} xs={1}>
+        <Grid item lg={1} md={1} xs={1.5}>
           <Tooltip title="Add notes">
             <Wrapper
               bgcolor={themeColor[currTheme][0].questionpage}
@@ -68,7 +68,7 @@ const DisplayHeading = () => {
             </Wrapper>
           </Tooltip>
         </Grid>
-        <Grid item lg={1} md={1} xs={1}>
+        <Grid item lg={1} md={1} xs={1.5}>
           <Tooltip title="Bookmark">
             <Wrapper
               bgcolor={themeColor[currTheme][0].questionpage}
@@ -86,7 +86,11 @@ const DisplayHeading = () => {
 };
 const Topic = styled.h3`
   color: ${(props) => props.color};
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 `;
+
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
