@@ -1,3 +1,17 @@
+# Striver sde sheet has helped thousands of student in their interview preparation. This website is based on the sde sheet.
+# Key features:-
+  * keep track of questions solved
+  * which topic has been started
+  * user can Add notes to each question
+  * Bookmark any important question 
+  * Reset the progress
+ # This website is completely bulilt on REACT JS
+   * frontend- react js
+   * state management- REDUX
+   * Local storage
+   
+   
+   
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
