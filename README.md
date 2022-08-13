@@ -5,7 +5,7 @@
   * user can Add notes to each question
   * Bookmark any important question 
   * Reset the progress
- # This website is completely bulilt on REACT JS
+ # This website is completely built on REACT JS
    * frontend- react js
    * state management- REDUX
    * Local storage
