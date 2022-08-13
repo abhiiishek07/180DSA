@@ -1,5 +1,5 @@
 import React from "react";
-import Lottie from "react-lottie";
+import { useLottie } from "lottie-react";
 import animationData from "../../Lottie/yoga-and-code.json";
 import styled from "styled-components";
 import { SocialMediaIconsReact } from "social-media-icons-react";
@@ -13,13 +13,12 @@ function ContactMe() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+  const { View } = useLottie(defaultOptions);
   return (
     <Wrapper>
       <Grid container style={{}}>
         <Grid item lg={6} md={1} sm={12} xs={12}>
-          <Image>
-            <Lottie options={defaultOptions} height={500} width={500} />
-          </Image>
+          <Image>{View}</Image>
         </Grid>
         <Grid item lg={6} md={1} sm={12} xs={12}>
           <AboutMe>
@@ -81,6 +80,7 @@ const Image = styled.div`
   display: flex;
   align-items: center;
   /* width: 50%; */
+  margin-left: 4rem;
 `;
 const AboutMe = styled.div`
   display: flex;

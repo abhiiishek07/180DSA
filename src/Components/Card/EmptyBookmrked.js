@@ -1,5 +1,5 @@
 import search from "../../Lottie/searching.json";
-import Lottie from "react-lottie";
+import { useLottie } from "lottie-react";
 import styled from "styled-components";
 import themeColor from "../../Data/themeColor.json";
 import { useSelector } from "react-redux";
@@ -13,6 +13,7 @@ function EmptyBookmarked() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+  const { View } = useLottie(defaultOptions);
 
   return (
     <>
@@ -23,7 +24,7 @@ function EmptyBookmarked() {
         {" "}
         Ohoo !! Bookmarked List is empty 🙆‍♂️
       </Title>
-      <Lottie options={defaultOptions} height={1000} width={500} />
+      {View}
     </>
   );
 }
