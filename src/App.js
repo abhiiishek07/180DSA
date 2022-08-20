@@ -3,21 +3,91 @@ import QuestionPage from "./Screen/QuestionPage/QuestionPage";
 import Navbar from "./Components/NavBar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import HomePage from "./Screen/HomePage/HomePage";
-import NotFound from "./Screen/HomePage/NotFound";
 import ContactMe from "./Components/Card/ContactMe";
 import Bookmarked from "./Components/Card/Bookmarked";
+import Login from "./Screen/Login/Login";
 import About from "./Components/Card/About";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import "./App.css";
 
 function App() {
+  const user = useSelector((state) => state.auth);
+
   return (
     <>
       <div className="main_body">
         <BrowserRouter>
-          <Routes>
+          {user.length === 0 ? (
+            <Routes>
+              {" "}
+              <Route path="/" element={<Login />} />
+              <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+          ) : (
+            <Routes>
+              {" "}
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Navbar />
+                    <HomePage />
+                    <Footer />
+                  </>
+                }
+              />
+              <Route
+                path="/topic/:type"
+                element={
+                  <>
+                    <Navbar />
+                    <QuestionPage />
+                  </>
+                }
+              />
+              <Route
+                path="/about"
+                element={
+                  <>
+                    <Navbar />
+                    <About />
+                  </>
+                }
+              />
+              <Route path="/about/contact" element={<ContactMe />} />
+              <Route
+                path="/bookmarks"
+                element={
+                  <>
+                    <Navbar />
+                    <Bookmarked />
+                    <Footer />
+                  </>
+                }
+              />
+              <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+          )}
+          {/* <Routes>
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes> */}
+          {/* <Routes>
             <Route
-              path="/"
+              path="/about"
+              element={
+                <>
+                  <Navbar />
+                  <About />
+                </>
+              }
+            />
+          </Routes> */}
+          {/* <Routes>
+           
+
+            <Route
+              path="/home"
               element={
                 <>
                   <Navbar />
@@ -26,7 +96,9 @@ function App() {
                 </>
               }
             />
-            <Route
+
+            {/* <Route path="/login" element={<Login />} /> */}
+          {/* <Route
               path="/topic/:type"
               element={
                 <>
@@ -43,9 +115,8 @@ function App() {
                   <About />
                 </>
               }
-            />
-
-            <Route path="/about/contact" element={<ContactMe />} />
+            /> */}
+          {/* <Route path="/about/contact" element={<ContactMe />} />
             <Route
               path="/bookmarks"
               element={
@@ -53,11 +124,10 @@ function App() {
                   <Navbar />
                   <Bookmarked />
                   <Footer />
-                </>
-              }
-            />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+                </> */}
+          {/* /> */}
+          {/* <Route path="*" element={<NotFound />} /> */}
+          {/* </Routes> */}
         </BrowserRouter>
       </div>
     </>

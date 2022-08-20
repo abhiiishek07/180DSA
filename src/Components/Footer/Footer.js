@@ -12,6 +12,8 @@ import BookmarksIcon from "@mui/icons-material/Bookmarks";
 
 function Footer() {
   const currTheme = useSelector((state) => state.theme);
+  const user = useSelector((state) => state.auth);
+  const bookmarked = useSelector((state) => state.bookmark);
   let isDark = false;
   if (currTheme === "dark") isDark = true;
   let dispatch = useDispatch();
@@ -25,6 +27,7 @@ function Footer() {
   const toggleDark = () => {
     dispatch(updateTheme("dark"));
   };
+
   return (
     <Cont>
       <Grid
@@ -36,18 +39,9 @@ function Footer() {
       >
         <Grid item lg={6} md={6} sm={6} xs={6}>
           <Wrapper Padding="3rem">
-            <a
-              href="https://github.com/abhiiishek07/180DSA"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Title
-                color={themeColor[currTheme][0].text}
-                border={themeColor[currTheme][0].border}
-              >
-                ⭐ This project
-              </Title>
-            </a>
+            <Name color={themeColor[currTheme][0].text}>
+              <span> નમસ્તે </span> 🙏 {user[0]}
+            </Name>
           </Wrapper>
         </Grid>
         <Grid item lg={6} md={6} sm={6} xs={6}>
@@ -72,19 +66,22 @@ function Footer() {
                 onClick={toggleDark}
               />
             )}
-            <BookmarksIcon
-              style={{
-                color: themeColor[currTheme][0].text,
-                cursor: "pointer",
-              }}
-              onClick={() => navigate("/bookmarks")}
-            />
+            <BookmarkCont>
+              <BookmarksIcon
+                style={{
+                  color: themeColor[currTheme][0].text,
+                  cursor: "pointer",
+                }}
+                onClick={() => navigate("/bookmarks")}
+              />
+              <span>{bookmarked.length > 0 ? bookmarked.length : ""}</span>
+            </BookmarkCont>
             <Title
               color={themeColor[currTheme][0].text}
               border={themeColor[currTheme][0].border}
               onClick={fun}
             >
-              About 🤔
+              settings 🤔
             </Title>
           </Wrapper>
         </Grid>
@@ -122,6 +119,22 @@ const Wrapper = styled.div`
   margin-top: 0.5rem;
   a {
     text-decoration: none;
+  }
+`;
+const Name = styled.h1`
+  font-size: 1rem;
+  color: ${(props) => props.color || "white"};
+  gap: 1rem;
+  span {
+    color: #c3393e;
+  }
+`;
+const BookmarkCont = styled.div`
+  position: relative;
+  span {
+    position: absolute;
+    top: -8px;
+    right: -8px;
   }
 `;
 

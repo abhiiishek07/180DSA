@@ -1,18 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Footer from "../Footer/Footer";
 import themeColor from "../../Data/themeColor.json";
 import Reset from "./Reset";
+import { useDispatch } from "react-redux";
 import Button from "@mui/material/Button";
+import { signOutFromGoogle } from "../../Firebase/FirebaseAuth";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { addUser, removeUser } from "../../store/authSlice";
 
 function About() {
   const currTheme = useSelector((state) => state.theme);
   let navigate = useNavigate();
+  let dispatch = useDispatch();
   const fun2 = () => {
     navigate("/about/contact");
   };
+  const auth = getAuth();
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        dispatch(addUser([user.displayName, user.email]));
+      } else {
+        dispatch(removeUser([]));
+      }
+    });
+  }, []);
   return (
     <>
       <Cont color={themeColor[currTheme][0].background}>
@@ -27,8 +42,20 @@ function About() {
           </Description>
           <Btn>
             <Button variant="contained" onClick={fun2}>
-              Contact Me
+              Contact Me 🙂
             </Button>
+            <Button variant="contained" onClick={signOutFromGoogle}>
+              log out
+            </Button>
+
+            <a
+              href="https://github.com/abhiiishek07/180DSA"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              <Button variant="contained">⭐ This project</Button>
+            </a>
 
             <Reset />
           </Btn>
@@ -75,6 +102,9 @@ const Btn = styled.div`
   flex-direction: row;
   gap: 1rem;
   margin: 4rem 0 4rem;
+  a {
+    text-decoration: none;
+  }
 `;
 
 export default About;
