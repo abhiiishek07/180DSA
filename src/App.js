@@ -13,7 +13,7 @@ import "./App.css";
 
 function App() {
   const user = useSelector((state) => state.auth);
-
+  console.log(user);
   return (
     <>
       <div className="main_body">
@@ -69,65 +69,6 @@ function App() {
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           )}
-          {/* <Routes>
-            <Route path="*" element={<Navigate to="/" />} />
-          </Routes> */}
-          {/* <Routes>
-            <Route
-              path="/about"
-              element={
-                <>
-                  <Navbar />
-                  <About />
-                </>
-              }
-            />
-          </Routes> */}
-          {/* <Routes>
-           
-
-            <Route
-              path="/home"
-              element={
-                <>
-                  <Navbar />
-                  <HomePage />
-                  <Footer />
-                </>
-              }
-            />
-
-            {/* <Route path="/login" element={<Login />} /> */}
-          {/* <Route
-              path="/topic/:type"
-              element={
-                <>
-                  <Navbar />
-                  <QuestionPage />
-                </>
-              }
-            />
-            <Route
-              path="/about"
-              element={
-                <>
-                  <Navbar />
-                  <About />
-                </>
-              }
-            /> */}
-          {/* <Route path="/about/contact" element={<ContactMe />} />
-            <Route
-              path="/bookmarks"
-              element={
-                <>
-                  <Navbar />
-                  <Bookmarked />
-                  <Footer />
-                </> */}
-          {/* /> */}
-          {/* <Route path="*" element={<NotFound />} /> */}
-          {/* </Routes> */}
         </BrowserRouter>
       </div>
     </>

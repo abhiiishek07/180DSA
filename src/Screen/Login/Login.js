@@ -14,7 +14,7 @@ function Login() {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        dispatch(addUser([user.displayName]));
+        dispatch(addUser(user.displayName));
       } else {
         dispatch(removeUser([]));
       }

@@ -66,7 +66,7 @@ function Footer() {
                 onClick={toggleDark}
               />
             )}
-            <BookmarkCont>
+            <BookmarkCont color={themeColor[currTheme][0].text}>
               <BookmarksIcon
                 style={{
                   color: themeColor[currTheme][0].text,
@@ -131,6 +131,7 @@ const Name = styled.h1`
 `;
 const BookmarkCont = styled.div`
   position: relative;
+  color: ${(props) => props.color || "white"};
   span {
     position: absolute;
     top: -8px;
