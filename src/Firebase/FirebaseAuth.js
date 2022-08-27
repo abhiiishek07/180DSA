@@ -6,12 +6,12 @@ import {
   signOut,
 } from "firebase/auth";
 const firebaseConfig = {
-  apiKey: "AIzaSyBfOXm2c8hjz63FpAEUDdldiWNhGtMhvX4",
-  authDomain: "dsa-817e6.firebaseapp.com",
-  projectId: "dsa-817e6",
-  storageBucket: "dsa-817e6.appspot.com",
-  messagingSenderId: "1037168632490",
-  appId: "1:1037168632490:web:11a9d3e1d232977eeda6d3",
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MSG_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
