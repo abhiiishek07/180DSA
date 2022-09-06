@@ -5,21 +5,19 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
+import { doc, updateDoc } from "firebase/firestore";
+import { db } from "../../Firebase/FirebaseAuth";
+import { useSelector } from "react-redux";
+import { setInitialBookmark } from "../../store/bookmarkSlice";
+import { setInitialCart } from "../../store/cartSlice";
+import { setInitialTopic } from "../../store/topicsSlice";
+import { setInitialNote } from "../../store/noteSlice";
 import { useDispatch } from "react-redux";
-import { emptyLocalStorage } from "../../store/cartSlice";
-import { emptyNote } from "../../store/noteSlice";
-import { emptyTopicList } from "../../store/topicsSlice";
-import { emptyBookmark } from "../../store/bookmarkSlice";
-
 // this function resets everything to zero
 export default function Reset() {
+  const user = useSelector((state) => state.auth);
   let dispatch = useDispatch();
-  const fun = () => {
-    dispatch(emptyNote([]));
-    dispatch(emptyTopicList([]));
-    dispatch(emptyBookmark([]));
-    dispatch(emptyLocalStorage([]));
-  };
+  const userRef = doc(db, "users", user[0][1]);
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -28,6 +26,50 @@ export default function Reset() {
 
   const handleClose = () => {
     setOpen(false);
+  };
+  const resetStates = () => {
+    dispatch(setInitialBookmark([]));
+    dispatch(setInitialCart([]));
+    dispatch(setInitialTopic([]));
+    dispatch(setInitialNote([]));
+  };
+  const reset = async () => {
+    updateDoc(userRef, {
+      topicsList: [],
+    })
+      .then(() => {
+        console.log("topic list reset successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    updateDoc(userRef, {
+      notesList: [],
+    })
+      .then(() => {
+        console.log("Notes item reset successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    updateDoc(userRef, {
+      bookmarkList: [],
+    })
+      .then(() => {
+        console.log("topic list reset successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    updateDoc(userRef, {
+      solvedQuestionList: [],
+    })
+      .then(() => {
+        console.log("solved question list reset successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -48,14 +90,15 @@ export default function Reset() {
         <DialogTitle id="alert-dialog-title">{"Are you sure ?"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Note: This is delete your current progress.
+            Note: This will reset your current progress.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button
             onClick={() => {
               handleClose();
-              fun();
+              reset();
+              resetStates();
             }}
             autoFocus
           >

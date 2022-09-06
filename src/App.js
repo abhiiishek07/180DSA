@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import QuestionPage from "./Screen/QuestionPage/QuestionPage";
 import Navbar from "./Components/NavBar/Navbar";
 import Footer from "./Components/Footer/Footer";
@@ -10,10 +10,33 @@ import About from "./Components/Card/About";
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./App.css";
-
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "./Firebase/FirebaseAuth";
+import { useDispatch } from "react-redux";
+import { setInitialCart } from "./store/cartSlice";
+import { setInitialBookmark } from "./store/bookmarkSlice";
+import { setInitialNote } from "./store/noteSlice";
+import { setInitialTopic } from "./store/topicsSlice";
 function App() {
   const user = useSelector((state) => state.auth);
-  console.log(user);
+  let dispatch = useDispatch();
+  const getData = async () => {
+    const userRef = doc(db, "users", user[0][1]);
+    const docSnap = await getDoc(userRef);
+
+    if (docSnap.exists()) {
+      dispatch(setInitialCart(docSnap.data().solvedQuestionList));
+      dispatch(setInitialBookmark(docSnap.data().bookmarkList));
+      dispatch(setInitialNote(docSnap.data().notesList));
+      dispatch(setInitialTopic(docSnap.data().topicsList));
+    } else {
+      console.log("User does not exist");
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
   return (
     <>
       <div className="main_body">

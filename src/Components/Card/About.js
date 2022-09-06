@@ -9,7 +9,7 @@ import { useDispatch } from "react-redux";
 import Button from "@mui/material/Button";
 import { signOutFromGoogle } from "../../Firebase/FirebaseAuth";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { addUser, removeUser } from "../../store/authSlice";
+import { removeUser } from "../../store/authSlice";
 
 function About() {
   const currTheme = useSelector((state) => state.theme);
@@ -22,7 +22,7 @@ function About() {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        dispatch(addUser([user.displayName, user.email]));
+        console.log("in about page");
       } else {
         dispatch(removeUser([]));
       }

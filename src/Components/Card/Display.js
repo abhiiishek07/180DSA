@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Grid } from "@mui/material";
 import styled from "styled-components";
 import CheckIcon from "@mui/icons-material/Check";
@@ -21,6 +21,8 @@ import NoteRoundedIcon from "@mui/icons-material/NoteRounded";
 import BookmarkAddIcon from "@mui/icons-material/BookmarkAdd";
 import BookmarkAddedIcon from "@mui/icons-material/BookmarkAdded";
 import { useParams } from "react-router-dom";
+import { doc, updateDoc, arrayUnion, arrayRemove } from "firebase/firestore";
+import { db } from "../../Firebase/FirebaseAuth";
 
 const Display = (props) => {
   const [open, setOpen] = useState(false); // modal (notes) is open or closed
@@ -28,15 +30,27 @@ const Display = (props) => {
   const items = useSelector((state) => state.cart);
   const currTheme = useSelector((state) => state.theme);
   const notes = useSelector((state) => state.note);
-  const bookmarkedquestionlist = useSelector((state) => state.bookmark);
+  const topic = useSelector((state) => state.topics);
+  const bookmarks = useSelector((state) => state.bookmark);
+  const user = useSelector((state) => state.auth);
+  const userRef = doc(db, "users", user[0][1]);
   let params = useParams();
-
   let dispatch = useDispatch();
 
   const handleClick = (id) => {
     if (items.includes(id)) {
       dispatch(remove(id));
       dispatch(deleteTopic(id));
+
+      updateDoc(userRef, {
+        solvedQuestionList: arrayRemove(id),
+      })
+        .then(() => {
+          console.log("solved question list updated successfully");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
 
       toast.error("Question Unsolved", {
         position: "top-center",
@@ -50,6 +64,16 @@ const Display = (props) => {
     } else {
       dispatch(add(id));
       dispatch(addTopic({ topicId: id, topicName: props.topic }));
+
+      updateDoc(userRef, {
+        solvedQuestionList: arrayUnion(id),
+      })
+        .then(() => {
+          console.log("solved question list updated successfully");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
 
       toast.success("Question Solved successfully", {
         position: "top-center",
@@ -110,6 +134,52 @@ const Display = (props) => {
     dispatch(deleteBookmark(props.id));
   };
 
+  //
+
+  const updateTopicsList = async () => {
+    updateDoc(userRef, {
+      topicsList: topic,
+    })
+      .then(() => {
+        console.log("topic list updated successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  useEffect(() => {
+    updateTopicsList();
+  }, [topic]);
+
+  const updateNotesList = async () => {
+    updateDoc(userRef, {
+      notesList: notes,
+    })
+      .then(() => {
+        console.log("Notes item updated successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  useEffect(() => {
+    updateNotesList();
+  }, [notes]);
+
+  const updateBookmarkList = async () => {
+    updateDoc(userRef, {
+      bookmarkList: bookmarks,
+    })
+      .then(() => {
+        console.log("topic list updated successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  useEffect(() => {
+    updateBookmarkList();
+  }, [bookmarks]);
   return (
     <Cont>
       <Grid
@@ -241,7 +311,7 @@ const Display = (props) => {
             border={themeColor[currTheme][0].questionpageborder}
           >
             <Logo color={themeColor[currTheme][0].text}>
-              {bookmarkedquestionlist.find((ele) => ele.Q_id === props.id) ? (
+              {bookmarks.find((ele) => ele.Q_id === props.id) ? (
                 <BookmarkAddedIcon
                   style={{ cursor: "pointer", color: "green" }}
                   onClick={handleDeleteBookmark}

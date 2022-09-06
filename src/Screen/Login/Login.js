@@ -6,15 +6,41 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../../store/authSlice";
 import { useLottie } from "lottie-react";
-import googleLogo from "../../Lottie/google.json";
+import robotHi from "../../Lottie/robotHi.json";
+import { setDoc, doc, getDoc } from "firebase/firestore";
+import { db } from "../../Firebase/FirebaseAuth";
 
 function Login() {
   let dispatch = useDispatch();
   const auth = getAuth();
+  const addNewUser = async (uid) => {
+    const userRef = doc(db, "users", uid);
+    const data = {
+      solvedQuestionList: [],
+      notesList: [],
+      topicsList: [],
+      bookmarkList: [],
+    };
+    const docSnap = await getDoc(userRef);
+    if (docSnap.exists()) {
+      console.log("Document already exist", docSnap.data());
+    } else {
+      console.log("No such document!");
+      setDoc(userRef, data)
+        .then(() => {
+          console.log("Document has been added successfully");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  };
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        dispatch(addUser(user.displayName));
+        dispatch(addUser([user.displayName, user.uid]));
+
+        addNewUser(user.uid);
       } else {
         dispatch(removeUser([]));
       }
@@ -24,7 +50,7 @@ function Login() {
     loop: true,
     autoplay: true,
 
-    animationData: googleLogo,
+    animationData: robotHi,
     innerHeight: 10,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",

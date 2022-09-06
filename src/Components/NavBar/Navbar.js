@@ -15,12 +15,16 @@ import "react-confirm-alert/src/react-confirm-alert.css";
 import themeColor from "../../Data/themeColor.json";
 import { addTopic } from "../../store/topicsSlice";
 import { useNavigate } from "react-router-dom";
+import { doc, updateDoc, arrayUnion } from "firebase/firestore";
+import { db } from "../../Firebase/FirebaseAuth";
 
 function Navbar() {
   const items = useSelector((state) => state.cart);
   const currTheme = useSelector((state) => state.theme);
   let dispatch = useDispatch();
   let navigate = useNavigate();
+  const user = useSelector((state) => state.auth);
+  const userRef = doc(db, "users", user[0][1]);
 
   //function to find the random Question
   const findRandomQ = () => {
@@ -51,6 +55,15 @@ function Navbar() {
                 dispatch(
                   addTopic({ topicId: randomQuesid, topicName: randTopicName })
                 );
+                updateDoc(userRef, {
+                  solvedQuestionList: arrayUnion(randomQuesid),
+                })
+                  .then(() => {
+                    console.log("solved question list updated successfully");
+                  })
+                  .catch((error) => {
+                    console.log(error);
+                  });
                 toast.success("Question Solved successfully", {
                   position: "top-center",
                   autoClose: 1500,
@@ -93,7 +106,6 @@ function Navbar() {
   const fun = () => {
     findRandomQ();
   };
-
   return (
     <Grid
       container

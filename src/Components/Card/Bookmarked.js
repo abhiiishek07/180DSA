@@ -6,10 +6,15 @@ import { Scrollbars } from "react-custom-scrollbars-2";
 import themeColor from "../../Data/themeColor.json";
 import { useSelector } from "react-redux";
 import Button from "@mui/material/Button";
-import { emptyBookmark } from "../../store/bookmarkSlice";
 import { useDispatch } from "react-redux";
 import EmptyBookmarked from "./EmptyBookmrked";
+import { db } from "../../Firebase/FirebaseAuth";
+import { doc, updateDoc } from "firebase/firestore";
+import { setInitialBookmark } from "../../store/bookmarkSlice";
+import { useEffect } from "react";
 function Bookmarked() {
+  const user = useSelector((state) => state.auth);
+  const userRef = doc(db, "users", user[0][1]);
   const currTheme = useSelector((state) => state.theme);
   let dispatch = useDispatch();
   const bookmarkedquestionlist = useSelector((state) => state.bookmark);
@@ -19,7 +24,24 @@ function Bookmarked() {
     };
     return <div style={{ ...style, ...thumbStyle }} {...props} />;
   };
+  const emptyBookmarkList = () => {
+    dispatch(setInitialBookmark([]));
+  };
+  const emptyBookmarkListDB = async () => {
+    updateDoc(userRef, {
+      bookmarkList: [],
+    })
+      .then(() => {
+        console.log("topic list updated successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
+  useEffect(() => {
+    emptyBookmarkListDB();
+  }, [bookmarkedquestionlist]);
   return (
     <Container color={themeColor[currTheme][0].background}>
       {bookmarkedquestionlist.length === 0 ? (
@@ -32,11 +54,11 @@ function Bookmarked() {
             style={{
               backgroundColor: "#db3545",
               color: "#ffffff",
-              marginTop: "0.5rem",
+              marginTop: "2rem",
             }}
             variant="outlined"
             onClick={() => {
-              dispatch(emptyBookmark([]));
+              emptyBookmarkList();
               <EmptyBookmarked />;
             }}
           >

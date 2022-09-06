@@ -27,6 +27,7 @@
     "react-scripts": "5.0.1",
     "react-toastify": "^9.0.8",
     "redux": "^4.2.0",
+    "redux-persist": "^6.0.0",
     "social-media-icons-react": "^1.1.10",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"

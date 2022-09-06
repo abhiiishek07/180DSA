@@ -19,7 +19,7 @@ function EmptyBookmarked() {
     <>
       <Title
         color={themeColor[currTheme][0].text}
-        style={{ marginTop: "1rem" }}
+        style={{ marginTop: "0rem" }}
       >
         {" "}
         Ohoo !! Bookmarked List is empty 🙆‍♂️

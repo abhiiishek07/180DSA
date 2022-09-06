@@ -40,7 +40,7 @@ function Footer() {
         <Grid item lg={6} md={6} sm={6} xs={6}>
           <Wrapper Padding="3rem">
             <Name color={themeColor[currTheme][0].text}>
-              <span> નમસ્તે </span> 🙏 {user[0]}
+              <span> નમસ્તે </span> 🙏 {user[0][0]}
             </Name>
           </Wrapper>
         </Grid>
