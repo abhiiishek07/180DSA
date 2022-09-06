@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useEffect } from "react";
 import { Grid } from "@mui/material";
 import styled from "styled-components";
 import { FaRandom } from "react-icons/fa";
@@ -21,6 +21,7 @@ import { db } from "../../Firebase/FirebaseAuth";
 function Navbar() {
   const items = useSelector((state) => state.cart);
   const currTheme = useSelector((state) => state.theme);
+  const topic = useSelector((state) => state.topics);
   let dispatch = useDispatch();
   let navigate = useNavigate();
   const user = useSelector((state) => state.auth);
@@ -106,6 +107,21 @@ function Navbar() {
   const fun = () => {
     findRandomQ();
   };
+  const updateTopicsList = async () => {
+    updateDoc(userRef, {
+      topicsList: topic,
+    })
+      .then(() => {
+        console.log("topic list updated successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  useEffect(() => {
+    updateTopicsList();
+  }, [topic]);
+
   return (
     <Grid
       container
