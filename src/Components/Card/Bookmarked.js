@@ -38,10 +38,21 @@ function Bookmarked() {
         console.log(error);
       });
   };
-
+  const updateBookmarkList = async () => {
+    updateDoc(userRef, {
+      bookmarkList: bookmarkedquestionlist,
+    })
+      .then(() => {
+        console.log("topic list updated successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   useEffect(() => {
-    emptyBookmarkListDB();
+    updateBookmarkList();
   }, [bookmarkedquestionlist]);
+
   return (
     <Container color={themeColor[currTheme][0].background}>
       {bookmarkedquestionlist.length === 0 ? (
@@ -59,6 +70,7 @@ function Bookmarked() {
             variant="outlined"
             onClick={() => {
               emptyBookmarkList();
+              emptyBookmarkListDB();
               <EmptyBookmarked />;
             }}
           >

@@ -36,6 +36,7 @@ const Display = (props) => {
   const userRef = doc(db, "users", user[0][1]);
   let params = useParams();
   let dispatch = useDispatch();
+  console.log("topics", topic);
 
   const handleClick = (id) => {
     if (items.includes(id)) {
