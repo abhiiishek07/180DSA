@@ -78,6 +78,7 @@ export default function Reset() {
         style={{ backgroundColor: "#db3545", color: "#ffffff" }}
         variant="outlined"
         onClick={handleClickOpen}
+        size="small"
       >
         Reset your progress
       </Button>

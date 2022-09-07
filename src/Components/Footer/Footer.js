@@ -34,18 +34,18 @@ function Footer() {
         container
         style={{
           "background-color": themeColor[currTheme][0].footer,
-          height: "6vh",
+          // height: "6vh",
         }}
       >
-        <Grid item lg={6} md={6} sm={6} xs={6}>
-          <Wrapper Padding="3rem">
+        <Grid item lg={9.5} md={6} sm={12} xs={12}>
+          <Wrapper Padding="3rem" Margin="0.7rem">
             <Name color={themeColor[currTheme][0].text}>
               <span> નમસ્તે </span> 🙏 {user[0][0]}
             </Name>
           </Wrapper>
         </Grid>
-        <Grid item lg={6} md={6} sm={6} xs={6}>
-          <Wrapper justifyContent="flex-end" Padding="3rem">
+        <Grid item lg={2.5} md={6} sm={12} xs={12}>
+          <Wrapper Padding="3rem">
             {isDark && (
               <LightModeSharpIcon
                 style={{
@@ -91,7 +91,6 @@ function Footer() {
 }
 const Cont = styled.div`
   display: flex;
-  height: 6vh;
   width: 100%;
 `;
 const Title = styled.h1`
@@ -101,6 +100,7 @@ const Title = styled.h1`
   color: ${(props) => props.color || "white"};
   margin-left: 0.5rem;
   border: ${(props) => props.border};
+
   border-radius: 0.8rem;
   padding: 0.4rem;
   cursor: pointer;
@@ -113,6 +113,7 @@ const Wrapper = styled.div`
   padding-left: ${(props) => props.Padding || "0rem"};
   padding-right: ${(props) => props.Padding || "0rem"};
   justify-content: ${(props) => props.justifyContent || "flex-start"};
+  margin-left: ${(props) => props.Margin};
   align-items: center;
   height: 5vh;
   gap: 1rem;

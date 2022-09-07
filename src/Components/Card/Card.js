@@ -11,7 +11,7 @@ const Card = (props) => {
   const topicsList = useSelector((state) => state.topics);
 
   return (
-    <Wrapper>
+    <Wrapper bgColor={props.bgColor}>
       <div className="card_container">
         <Title>{props.topicName}</Title>
       </div>
@@ -31,7 +31,9 @@ const Wrapper = styled.div`
   overflow: hidden;
   width: 15rem;
   min-height: 20vh;
-  background-color: #0059b2;
+  background-color: ${(props) => props.bgColor};
+
+  /* #0059b2; */
   border-radius: 0.5rem;
   padding: 0.5rem;
   transition: transform 0.2s;

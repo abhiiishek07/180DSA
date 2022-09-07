@@ -41,10 +41,14 @@ function About() {
             .
           </Description>
           <Btn>
-            <Button variant="contained" onClick={fun2}>
+            <Button variant="contained" size="small" onClick={fun2}>
               Contact Me 🙂
             </Button>
-            <Button variant="contained" onClick={signOutFromGoogle}>
+            <Button
+              variant="contained"
+              size="small"
+              onClick={signOutFromGoogle}
+            >
               log out
             </Button>
 
@@ -54,7 +58,9 @@ function About() {
               rel="noreferrer"
             >
               {" "}
-              <Button variant="contained">⭐ This project</Button>
+              <Button variant="contained" size="small">
+                ⭐ This project
+              </Button>
             </a>
 
             <Reset />
@@ -73,24 +79,26 @@ const Cont = styled.div`
   flex-direction: column;
   width: 100%;
   height: 85.5vh;
-  justify-content: center;
+  /* background-color: green; */
+  /* justify-content: center; */
   align-items: center;
   background-color: ${(props) => props.color};
 `;
 const Wrapper = styled.div`
   display: flex;
+  /* background-color: red; */
   flex-direction: column;
-  width: 70%;
-  height: 85.5vh;
-  /* justify-content: center; */
+  width: 100%;
+
+  justify-content: center;
   align-items: center;
 `;
 const Description = styled.h2`
   color: ${(props) => props.txtcolor};
   font-size: 2rem;
   margin: 2rem;
-  word-spacing: 0.5rem;
-  letter-spacing: 0.05rem;
+  /* word-spacing: 0.5rem;
+  letter-spacing: 0.05rem; */
   margin-top: ${(props) => (props.descrip === "true" ? "3rem" : "0rem")};
 `;
 const Anchor = styled.a`
@@ -105,6 +113,7 @@ const Btn = styled.div`
   a {
     text-decoration: none;
   }
+  flex-wrap: nowrap;
 `;
 
 export default About;

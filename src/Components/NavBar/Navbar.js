@@ -155,8 +155,8 @@ function Navbar() {
         </Wrapper>
       </Grid>
       <Grid item lg={3} md={12} sm={12} xs={12}>
-        <Wrapper justifyContent="flex-end">
-          <Title color={themeColor[currTheme][0].text} padding="2rem">
+        <Wrapper>
+          <Title color={themeColor[currTheme][0].text} padding="3rem">
             Total Solved : {items.length} / 191
           </Title>
         </Wrapper>

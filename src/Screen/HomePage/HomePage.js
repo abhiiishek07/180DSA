@@ -50,6 +50,7 @@ const HomePage = () => {
                       topicName={HomePageList.topic_name}
                       totalQ={HomePageList.totalQ}
                       pathName={HomePageList.navTo}
+                      bgColor={HomePageList.bgColor}
                     />
                   </Wrapper>
                 </motion.div>
