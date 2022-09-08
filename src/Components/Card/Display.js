@@ -36,7 +36,6 @@ const Display = (props) => {
   const userRef = doc(db, "users", user[0][1]);
   let params = useParams();
   let dispatch = useDispatch();
-  console.log("topics", topic);
 
   const handleClick = (id) => {
     if (items.includes(id)) {
@@ -172,7 +171,7 @@ const Display = (props) => {
       bookmarkList: bookmarks,
     })
       .then(() => {
-        console.log("topic list updated successfully");
+        console.log("bookmark list updated successfully");
       })
       .catch((error) => {
         console.log(error);

@@ -116,7 +116,7 @@ const Wrapper = styled.div`
   margin-left: ${(props) => props.Margin};
   align-items: center;
   height: 5vh;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-top: 0.5rem;
   a {
     text-decoration: none;

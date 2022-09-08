@@ -32,7 +32,7 @@ function Bookmarked() {
       bookmarkList: [],
     })
       .then(() => {
-        console.log("topic list updated successfully");
+        console.log("book mark list updated successfully");
       })
       .catch((error) => {
         console.log(error);
@@ -43,7 +43,7 @@ function Bookmarked() {
       bookmarkList: bookmarkedquestionlist,
     })
       .then(() => {
-        console.log("topic list updated successfully");
+        console.log("book mark list updated successfully");
       })
       .catch((error) => {
         console.log(error);

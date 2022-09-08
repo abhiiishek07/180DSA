@@ -133,7 +133,7 @@ function Navbar() {
         <Wrapper>
           <Title
             color={themeColor[currTheme][0].text}
-            padding="3rem"
+            paddingLeft="3rem"
             onClick={() => navigate("/")}
             style={{ cursor: "pointer" }}
           >
@@ -156,7 +156,7 @@ function Navbar() {
       </Grid>
       <Grid item lg={3} md={12} sm={12} xs={12}>
         <Wrapper>
-          <Title color={themeColor[currTheme][0].text} padding="3rem">
+          <Title color={themeColor[currTheme][0].text} paddingLeft="2.25rem">
             Total Solved : {items.length} / 191
           </Title>
         </Wrapper>
@@ -168,9 +168,10 @@ function Navbar() {
 const Title = styled.h1`
   font-size: ${(props) => (props.pickOne === "pickOne" ? "1rem" : "1.5rem")};
   text-align: center;
+  margin-left: ${(props) => props.marginLeft || "0rem"};
   color: ${(props) => props.color || "white"};
-  padding-left: ${(props) => props.padding || "0rem"};
-  padding-right: ${(props) => props.padding || "0rem"};
+  padding-left: ${(props) => props.paddingLeft || "0rem"};
+  /* padding-right: ${(props) => props.padding || "0rem"}; */
 `;
 
 const Wrapper = styled.div`
