@@ -25,6 +25,7 @@ function App() {
     const docSnap = await getDoc(userRef);
 
     if (docSnap.exists()) {
+      console.log("topic", docSnap.data().topicsList);
       dispatch(setInitialCart(docSnap.data().solvedQuestionList));
       dispatch(setInitialBookmark(docSnap.data().bookmarkList));
       dispatch(setInitialNote(docSnap.data().notesList));

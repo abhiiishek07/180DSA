@@ -23,7 +23,7 @@ function Login() {
     };
     const docSnap = await getDoc(userRef);
     if (docSnap.exists()) {
-      console.log("Document already exist", docSnap.data());
+      console.log("Document already exist");
     } else {
       console.log("No such document!");
       setDoc(userRef, data)
