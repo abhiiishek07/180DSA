@@ -7,6 +7,7 @@ import { Scrollbars } from "react-custom-scrollbars-2";
 import themeColor from "../../Data/themeColor.json";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
+import Navbar from "../../Components/NavBar/Navbar";
 const HomePage = () => {
   const currTheme = useSelector((state) => state.theme);
   const renderThumb = ({ style, ...props }) => {
@@ -16,50 +17,54 @@ const HomePage = () => {
     return <div style={{ ...style, ...thumbStyle }} {...props} />;
   };
   return (
-    <Container color={themeColor[currTheme][0].background}>
-      <Scrollbars
-        autoHide
-        renderThumbVertical={renderThumb}
-        style={{
-          width: "70%",
-          height: "70vh",
-        }}
-      >
-        <Grid
-          container
+    <>
+      <Navbar />
+
+      <Container color={themeColor[currTheme][0].background}>
+        <Scrollbars
+          autoHide
+          renderThumbVertical={renderThumb}
           style={{
-            padding: "0rem ",
-            width: "100%",
-            backgroundColor: themeColor[currTheme][0].background,
+            width: "70%",
+            height: "70vh",
           }}
         >
-          {HomePageList.map((HomePageList, index) => {
-            return (
-              <Grid item lg={4} md={6} xs={12}>
-                <motion.div
-                  whileInView={{ y: [0, 30] }}
-                  transition={{
-                    repeatType: "reverse",
-                    duration: 0.7,
-                    delay: 0.1,
-                  }}
-                >
-                  <Wrapper>
-                    <Card
-                      key={index}
-                      topicName={HomePageList.topic_name}
-                      totalQ={HomePageList.totalQ}
-                      pathName={HomePageList.navTo}
-                      bgColor={HomePageList.bgColor}
-                    />
-                  </Wrapper>
-                </motion.div>
-              </Grid>
-            );
-          })}
-        </Grid>
-      </Scrollbars>
-    </Container>
+          <Grid
+            container
+            style={{
+              padding: "0rem ",
+              width: "100%",
+              backgroundColor: themeColor[currTheme][0].background,
+            }}
+          >
+            {HomePageList.map((HomePageList, index) => {
+              return (
+                <Grid item lg={4} md={6} xs={12}>
+                  <motion.div
+                    whileInView={{ y: [0, 30] }}
+                    transition={{
+                      repeatType: "reverse",
+                      duration: 0.7,
+                      delay: 0.1,
+                    }}
+                  >
+                    <Wrapper>
+                      <Card
+                        key={index}
+                        topicName={HomePageList.topic_name}
+                        totalQ={HomePageList.totalQ}
+                        pathName={HomePageList.navTo}
+                        bgColor={HomePageList.bgColor}
+                      />
+                    </Wrapper>
+                  </motion.div>
+                </Grid>
+              );
+            })}
+          </Grid>
+        </Scrollbars>
+      </Container>
+    </>
   );
 };
 
