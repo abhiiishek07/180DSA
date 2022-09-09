@@ -4,98 +4,126 @@
         "topic_name":"Array-I",
         "totalQ":6,
         "navTo":"arrayI",
-        "bgColor":"#6050DC"
+        "bgColor":"#6050DC",
+        "start":0,
+        "end":5
     },
     {
         "id":1,
         "topic_name":"Array-II",
         "totalQ":6,
         "navTo":"arrayII",
-        "bgColor":"#6050DC"
+        "bgColor":"#6050DC",
+        "start":6,
+        "end":11
     },
     {
         "id":2,
         "topic_name":"Array-III",
         "totalQ":6,
         "navTo":"arrayIII",
-        "bgColor":"#6050DC"
+        "bgColor":"#6050DC",
+        "start":12,
+        "end":17
     },
     {
         "id":3,
         "topic_name":"Array-IV",
         "totalQ":6,
         "navTo":"arrayIV",
-        "bgColor":"#6050DC"
+        "bgColor":"#6050DC",
+        "start":18,
+        "end":23
     },
     {
         "id":4,
         "topic_name":"Linked List-I",
         "totalQ":"6",
         "navTo":"linkedlistI",
-        "bgColor":"#9932cc"
+        "bgColor":"#9932cc",
+        "start":24,
+        "end":29
     },
     {
         "id":5,
         "topic_name":"Linked List-II",
         "totalQ":"6",
         "navTo":"linkedlistII",
-        "bgColor":"#9932cc"
+        "bgColor":"#9932cc",
+        "start":30,
+        "end":35
     },
     {
         "id":6,
         "topic_name":"Linked List & Array",
         "totalQ":"6",
         "navTo":"linkedlistIII",
-        "bgColor":"#9932cc"
+        "bgColor":"#9932cc",
+        "start":36,
+        "end":41
     },
     {
         "id":7,
         "topic_name":"Greedy",
         "totalQ":"6",
         "navTo":"greedy",
-        "bgColor":"#6883BC"
+        "bgColor":"#6883BC",
+        "start":42,
+        "end":47
     },
     {
         "id":8,
         "topic_name":"Recursion",
         "totalQ":"6",
         "navTo":"recursion",
-        "bgColor":"#008080"
+        "bgColor":"#008080",
+        "start":48,
+        "end":53
     },
     {
         "id":9,
         "topic_name":"Recursion & Backtracing",
         "totalQ":"6",
         "navTo":"recursionandbacktracing",
-        "bgColor":"#008080"
+        "bgColor":"#008080",
+        "start":54,
+        "end":59
     },
     {
         "id":10,
         "topic_name":"Binary search",
         "totalQ":"8",
         "navTo":"binarysearch",
-        "bgColor":"#2774AE"
+        "bgColor":"#2774AE",
+        "start":60,
+        "end":67
     },
     {
         "id":11,
         "topic_name":"Heap",
         "totalQ":"6",
         "navTo":"heap",
-        "bgColor":"#2E5090"
+        "bgColor":"#2E5090",
+        "start":68,
+        "end":73
     },
     {
         "id":12,
         "topic_name":"Stack & Queue-I",
         "totalQ":"7",
         "navTo":"stackandqueueI",
-        "bgColor":"#5F4B8BFF"
+        "bgColor":"#5F4B8BFF",
+        "start":74,
+        "end":80
     },
     {
         "id":13,
         "topic_name":"Stack & Queue-II",
         "totalQ":"10",
         "navTo":"stackandqueueII",
-        "bgColor":"#5F4B8BFF"
+        "bgColor":"#5F4B8BFF",
+        "start":81,
+        "end":90
         
     },
     {
@@ -103,90 +131,116 @@
         "topic_name":"String-I",
         "totalQ":"6",
         "navTo":"stringI",
-        "bgColor":"#0077c0"
+        "bgColor":"#0077c0",
+        "start":91,
+        "end":96
     },
     {
         "id":15,
         "topic_name":"String-II",
         "totalQ":"6",
         "navTo":"stringII",
-        "bgColor":"#0077c0"
+        "bgColor":"#0077c0",
+        "start":97,
+        "end":102
     },
     {
         "id":16,
         "topic_name":"Binary Tree-I",
         "totalQ":"12",
         "navTo":"binarytreeI",
-        "bgColor":"#C7395F"
+        "bgColor":"#C7395F",
+        "start":103,
+        "end":114
     },
     {
         "id":17,
         "topic_name":"Binary Tree-II",
         "totalQ":"8",
         "navTo":"binarytreeII",
-        "bgColor":"#C7395F"
+        "bgColor":"#C7395F",
+        "start":115,
+        "end":122
     },
     {
         "id":18,
         "topic_name":"Binary Tree-III",
         "totalQ":"7",
         "navTo":"binarytreeIII",
-        "bgColor":"#C7395F"
+        "bgColor":"#C7395F",
+        "start":123,
+        "end":129
     },
     {
         "id":19,
         "topic_name":"BST-I",
         "totalQ":"7",
         "navTo":"binarysearchtreeI",
-        "bgColor":"#0093AF"
+        "bgColor":"#0093AF",
+        "start":130,
+        "end":136
     },
     {
         "id":20,
         "topic_name":"BST-II",
         "totalQ":"8",
         "navTo":"binarysearchtreeII",
-        "bgColor":"#0093AF"
+        "bgColor":"#0093AF",
+        "start":137,
+        "end":144
     },
     {
         "id":21,
         "topic_name":"Binary Tree (Misc)",
         "totalQ":"6",
         "navTo":"binarytreemisc",
-        "bgColor":"#0093AF"
+        "bgColor":"#0093AF",
+        "start":145,
+        "end":150
     },
     {
         "id":22,
         "topic_name":"Graph-I",
         "totalQ":"12",
         "navTo":"graphI",
-        "bgColor":"#720e9e"
+        "bgColor":"#720e9e",
+        "start":151,
+        "end":162
     },
     {
         "id":23,
         "topic_name":"Graph-II",
         "totalQ":"6",
         "navTo":"graphII",
-        "bgColor":"#720e9e"
+        "bgColor":"#720e9e",
+        "start":163,
+        "end":168
     },
     {
         "id":24,
         "topic_name":"DP-I",
         "totalQ":"7",
         "navTo":"dynamicprogrammingI",
-        "bgColor":"#7B68EE"
+        "bgColor":"#7B68EE",
+        "start":169,
+        "end":175
     },
     {
         "id":25,
         "topic_name":"DP-II",
         "totalQ":"8",
         "navTo":"dynamicprogrammingII",
-        "bgColor":"#7B68EE"
+        "bgColor":"#7B68EE",
+        "start":176,
+        "end":183
     },
     {
         "id":26,
         "topic_name":"Trie",
         "totalQ":"7",
         "navTo":"trie",
-        "bgColor":"#974fbb"
+        "bgColor":"#974fbb",
+        "start":184,
+        "end":190
     }
 ]

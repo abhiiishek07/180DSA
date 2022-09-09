@@ -18,7 +18,6 @@ function Login() {
     const data = {
       solvedQuestionList: [],
       notesList: [],
-      topicsList: [],
       bookmarkList: [],
     };
     const docSnap = await getDoc(userRef);

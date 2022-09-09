@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import QuestionPage from "./Screen/QuestionPage/QuestionPage";
 import Navbar from "./Components/NavBar/Navbar";
 import Footer from "./Components/Footer/Footer";
@@ -16,7 +16,6 @@ import { useDispatch } from "react-redux";
 import { setInitialCart } from "./store/cartSlice";
 import { setInitialBookmark } from "./store/bookmarkSlice";
 import { setInitialNote } from "./store/noteSlice";
-import { setInitialTopic } from "./store/topicsSlice";
 function App() {
   const user = useSelector((state) => state.auth);
   let dispatch = useDispatch();
@@ -25,11 +24,10 @@ function App() {
     const docSnap = await getDoc(userRef);
 
     if (docSnap.exists()) {
-      console.log("topic", docSnap.data().topicsList);
       dispatch(setInitialCart(docSnap.data().solvedQuestionList));
       dispatch(setInitialBookmark(docSnap.data().bookmarkList));
       dispatch(setInitialNote(docSnap.data().notesList));
-      dispatch(setInitialTopic(docSnap.data().topicsList));
+      console.log("initial states updated");
     } else {
       console.log("User does not exist");
     }

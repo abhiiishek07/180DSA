@@ -5,20 +5,29 @@ import { useSelector } from "react-redux";
 const Card = (props) => {
   const navigate = useNavigate();
   const navi = props.pathName;
+  const items = useSelector((state) => state.cart);
   const fun = () => {
     navigate("/topic/" + navi);
   };
-  const topicsList = useSelector((state) => state.topics);
+  const totalSolved = (a, b) => {
+    let arr = items.filter((ele) => ele >= a && ele <= b);
+    return arr.length;
+  };
 
   return (
     <Wrapper bgColor={props.bgColor}>
       <div className="card_container">
         <Title>{props.topicName}</Title>
       </div>
-      <Descrip> Total Question : {props.totalQ} </Descrip>
+      <Descrip>
+        {" "}
+        Total solved : {totalSolved(props.start, props.end)}
+        {" / "}
+        {props.totalQ}
+      </Descrip>
       <BtnCont>
         <Button onClick={fun}>
-          {topicsList.find((ele) => ele.topicName === props.pathName)
+          {items.some((value) => value >= props.start && value <= props.end)
             ? "CONTINUE"
             : "START SOLVING"}
         </Button>

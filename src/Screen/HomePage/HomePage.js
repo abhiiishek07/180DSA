@@ -16,6 +16,7 @@ const HomePage = () => {
     };
     return <div style={{ ...style, ...thumbStyle }} {...props} />;
   };
+
   return (
     <>
       <Navbar />
@@ -55,6 +56,8 @@ const HomePage = () => {
                         totalQ={HomePageList.totalQ}
                         pathName={HomePageList.navTo}
                         bgColor={HomePageList.bgColor}
+                        start={HomePageList.start}
+                        end={HomePageList.end}
                       />
                     </Wrapper>
                   </motion.div>

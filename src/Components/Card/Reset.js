@@ -10,7 +10,6 @@ import { db } from "../../Firebase/FirebaseAuth";
 import { useSelector } from "react-redux";
 import { setInitialBookmark } from "../../store/bookmarkSlice";
 import { setInitialCart } from "../../store/cartSlice";
-import { setInitialTopic } from "../../store/topicsSlice";
 import { setInitialNote } from "../../store/noteSlice";
 import { useDispatch } from "react-redux";
 // this function resets everything to zero
@@ -30,19 +29,9 @@ export default function Reset() {
   const resetStates = () => {
     dispatch(setInitialBookmark([]));
     dispatch(setInitialCart([]));
-    dispatch(setInitialTopic([]));
     dispatch(setInitialNote([]));
   };
   const reset = async () => {
-    updateDoc(userRef, {
-      topicsList: [],
-    })
-      .then(() => {
-        console.log("topic list reset successfully");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
     updateDoc(userRef, {
       notesList: [],
     })

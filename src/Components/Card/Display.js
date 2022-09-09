@@ -5,7 +5,6 @@ import CheckIcon from "@mui/icons-material/Check";
 import ClearIcon from "@mui/icons-material/Clear";
 import { useDispatch } from "react-redux";
 import { add, remove } from "../../store/cartSlice";
-import { addTopic, deleteTopic } from "../../store/topicsSlice";
 import { useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -30,18 +29,14 @@ const Display = (props) => {
   const items = useSelector((state) => state.cart);
   const currTheme = useSelector((state) => state.theme);
   const notes = useSelector((state) => state.note);
-  const topic = useSelector((state) => state.topics);
   const bookmarks = useSelector((state) => state.bookmark);
   const user = useSelector((state) => state.auth);
   const userRef = doc(db, "users", user[0][1]);
   let params = useParams();
   let dispatch = useDispatch();
-
   const handleClick = (id) => {
     if (items.includes(id)) {
       dispatch(remove(id));
-      dispatch(deleteTopic(id));
-
       updateDoc(userRef, {
         solvedQuestionList: arrayRemove(id),
       })
@@ -63,8 +58,6 @@ const Display = (props) => {
       });
     } else {
       dispatch(add(id));
-      dispatch(addTopic({ topicId: id, topicName: props.topic }));
-
       updateDoc(userRef, {
         solvedQuestionList: arrayUnion(id),
       })
@@ -135,22 +128,6 @@ const Display = (props) => {
   };
 
   //
-
-  const updateTopicsList = async () => {
-    updateDoc(userRef, {
-      topicsList: topic,
-    })
-      .then(() => {
-        console.log("topic list updated successfully");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-  useEffect(() => {
-    updateTopicsList();
-  }, [topic]);
-
   const updateNotesList = async () => {
     updateDoc(userRef, {
       notesList: notes,

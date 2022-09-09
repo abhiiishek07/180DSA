@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import { React } from "react";
 import { Grid } from "@mui/material";
 import styled from "styled-components";
 import { FaRandom } from "react-icons/fa";
@@ -13,7 +13,6 @@ import { useDispatch } from "react-redux";
 import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
 import themeColor from "../../Data/themeColor.json";
-import { addTopic } from "../../store/topicsSlice";
 import { useNavigate } from "react-router-dom";
 import { doc, updateDoc, arrayUnion } from "firebase/firestore";
 import { db } from "../../Firebase/FirebaseAuth";
@@ -21,7 +20,6 @@ import { db } from "../../Firebase/FirebaseAuth";
 function Navbar() {
   const items = useSelector((state) => state.cart);
   const currTheme = useSelector((state) => state.theme);
-  const topic = useSelector((state) => state.topics);
   let dispatch = useDispatch();
   let navigate = useNavigate();
   const user = useSelector((state) => state.auth);
@@ -53,9 +51,6 @@ function Navbar() {
               label: "Yes",
               onClick: () => {
                 dispatch(add(randomQuesid));
-                dispatch(
-                  addTopic({ topicId: randomQuesid, topicName: randTopicName })
-                );
                 updateDoc(userRef, {
                   solvedQuestionList: arrayUnion(randomQuesid),
                 })
@@ -107,20 +102,6 @@ function Navbar() {
   const fun = () => {
     findRandomQ();
   };
-  const updateTopicsList = async () => {
-    updateDoc(userRef, {
-      topicsList: topic,
-    })
-      .then(() => {
-        console.log("topic list updated successfully");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-  useEffect(() => {
-    updateTopicsList();
-  }, [topic]);
 
   return (
     <Grid

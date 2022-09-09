@@ -28,6 +28,7 @@ function About() {
       }
     });
   }, []);
+
   return (
     <>
       <Cont color={themeColor[currTheme][0].background}>

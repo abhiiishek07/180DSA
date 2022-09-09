@@ -785,56 +785,56 @@
         "Solution_link":"https://www.youtube.com/watch?v=80Zug6D1_r4&list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk&index=38"
     },
     {
-        "id":190,
+        "id":107,
         "Q_No":4,
         "Question":"Morris Preorder Traversal",
         "Question_link":"https://www.geeksforgeeks.org/morris-traversal-for-preorder/",
         "Solution_link":"https://youtu.be/80Zug6D1_r4"
     },
     {
-        "id":107,
+        "id":108,
         "Q_No":5,
         "Question":"Leftview Of Binary Tree",
         "Question_link":"https://practice.geeksforgeeks.org/problems/left-view-of-binary-tree/1",
         "Solution_link":"https://www.youtube.com/watch?v=KV4mRzTjlAk&list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk&index=25"
     },
     {
-        "id":108,
+        "id":109,
         "Q_No":6,
         "Question":"Bottom View of Binary Tree",
         "Question_link":"https://practice.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1",
         "Solution_link":"https://www.youtube.com/watch?v=0FtVY6I4pB8&list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk&index=24"
     },
     {
-        "id":109,
+        "id":1110,
         "Q_No":7,
         "Question":"Top View of Binary Tree",
         "Question_link":"https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/1",
         "Solution_link":"https://www.youtube.com/watch?v=Et9OCDNvJ78&list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk&index=23"
     },
     {
-        "id":110,
+        "id":111,
         "Q_No":8,
         "Question":"Preorder inorder postorder in a single traversal",
         "Question_link":"https://bit.ly/3rlXpTX",
         "Solution_link":"https://youtu.be/ySp2epYvgTE"
     },
     {
-        "id":111,
+        "id":112,
         "Q_No":9,
         "Question":"Vertical order traversal",
         "Question_link":"https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/",
         "Solution_link":"https://youtu.be/q_a6lpbKJdw"
     },
     {
-        "id":112,
+        "id":113,
         "Q_No":10,
         "Question":"Root to node path in a Binary Tree",
         "Question_link":"https://www.interviewbit.com/problems/path-to-given-node/",
         "Solution_link":"https://youtu.be/fmflMqVOC7k"
     },
     {
-        "id":113,
+        "id":114,
         "Q_No":11,
         "Question":"Max width of a Binary Tree",
         "Question_link":"https://leetcode.com/problems/maximum-width-of-binary-tree/",
@@ -843,56 +843,56 @@
 ],
 "binarytreeII":[
     {
-        "id":114,
+        "id":115,
         "Q_No":0,
         "Question":"Level order Traversal / Level order traversal in spiral form",
         "Question_link":"https://leetcode.com/problems/binary-tree-level-order-traversal/",
         "Solution_link":"https://youtu.be/EoAsWbO7sqg"
     },
     {
-        "id":115,
+        "id":116,
         "Q_No":1,
         "Question":"Height of a Binary Tree",
         "Question_link":"https://leetcode.com/problems/maximum-depth-of-binary-tree/",
         "Solution_link":"https://youtu.be/eD3tmO66aBA"
     },
     {
-        "id":116,
+        "id":117,
         "Q_No":2,
         "Question":"Diameter of Binary Tree",
         "Question_link":"https://leetcode.com/problems/diameter-of-binary-tree/",
         "Solution_link":"https://youtu.be/Rezetez59Nk"
     },
     {
-        "id":117,
+        "id":118,
         "Q_No":3,
         "Question":"Check if the Binary tree is height-balanced or not",
         "Question_link":"https://leetcode.com/problems/balanced-binary-tree/",
         "Solution_link":"https://youtu.be/Yt50Jfbd8Po"
     },
     {
-        "id":118,
+        "id":119,
         "Q_No":4,
         "Question":"LCA in Binary Tree",
         "Question_link":"https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
         "Solution_link":"https://youtu.be/_-QHfMDde90"
     },
     {
-        "id":119,
+        "id":120,
         "Q_No":5,
         "Question":"Check if two trees are identical or not",
         "Question_link":"https://leetcode.com/problems/same-tree/",
         "Solution_link":"https://youtu.be/BhuvF_-PWS0"
     },
     {
-        "id":120,
+        "id":121,
         "Q_No":6,
         "Question":"Zig Zag Traversal of Binary Tree",
         "Question_link":"https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/",
         "Solution_link":"https://youtu.be/3OXWEdlIGl4"
     },
     {
-        "id":121,
+        "id":122,
         "Q_No":7,
         "Question":"Boundary Traversal of Binary Tree",
         "Question_link":"https://practice.geeksforgeeks.org/problems/boundary-traversal-of-binary-tree/0",
@@ -901,49 +901,49 @@
 ],
 "binarytreeIII":[
     {
-        "id":122,
+        "id":123,
         "Q_No":0,
         "Question":"Maximum path sum",
         "Question_link":"https://leetcode.com/problems/binary-tree-maximum-path-sum/",
         "Solution_link":"https://youtu.be/WszrfSwMz58"
     },
     {
-        "id":123,
+        "id":124,
         "Q_No":1,
         "Question":"Construct Binary Tree from inorder and preorder",
         "Question_link":"https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
         "Solution_link":"https://youtu.be/aZNaLrVebKQ"
     },
     {
-        "id":124,
+        "id":125,
         "Q_No":2,
         "Question":"Construct Binary Tree from Inorder and Postorder",
         "Question_link":"https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/",
         "Solution_link":"https://youtu.be/LgLRTaEMRVc"
     },
     {
-        "id":125,
+        "id":126,
         "Q_No":3,
         "Question":"Symmetric Binary Tree",
         "Question_link":"https://leetcode.com/problems/symmetric-tree/",
         "Solution_link":"https://youtu.be/nKggNAiEpBE"
     },
     {
-        "id":126,
+        "id":127,
         "Q_No":4,
         "Question":"Flatten Binary Tree to LinkedList",
         "Question_link":"https://leetcode.com/problems/flatten-binary-tree-to-linked-list/",
         "Solution_link":"https://youtu.be/sWf7k1x9XR4"
     },
     {
-        "id":127,
+        "id":128,
         "Q_No":5,
         "Question":"Check if Binary Tree is the mirror of itself or not",
         "Question_link":"https://practice.geeksforgeeks.org/problems/mirror-tree/1",
         "Solution_link":"https://www.youtube.com/watch?v=lLdyqkdFNi0"
     },
     {
-        "id":128,
+        "id":129,
         "Q_No":6,
         "Question":"Check for Children Sum Property",
         "Question_link":"https://bit.ly/33yExIQ",
@@ -952,49 +952,49 @@
 ],
 "binarysearchtreeI":[
     {
-        "id":129,
+        "id":130,
         "Q_No":0,
         "Question":"Populate Next Right pointers of Tree",
         "Question_link":"https://leetcode.com/problems/populating-next-right-pointers-in-each-node/",
         "Solution_link":"https://www.youtube.com/watch?v=yl-fdkyQD8A"
     },
     {
-        "id":130,
+        "id":131,
         "Q_No":1,
         "Question":"Search given Key in BST",
         "Question_link":"https://leetcode.com/problems/search-in-a-binary-search-tree/",
         "Solution_link":"https://youtu.be/KcNt6v_56cc"
     },
     {
-        "id":131,
+        "id":132,
         "Q_No":2,
         "Question":"Construct BST from given keys",
         "Question_link":"https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/",
         "Solution_link":"https://www.techiedelight.com/construct-balanced-bst-given-keys/"
     },
     {
-        "id":132,
+        "id":133,
         "Q_No":3,
         "Question":"Construct BST from preorder traversal",
         "Question_link":"https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/",
         "Solution_link":"https://youtu.be/UmJT3j26t1I"
     },
     {
-        "id":133,
+        "id":134,
         "Q_No":4,
         "Question":"Check if a BT is BST or not",
         "Question_link":"https://leetcode.com/problems/validate-binary-search-tree/",
         "Solution_link":"https://youtu.be/f-sj7I5oXEI"
     },
     {
-        "id":134,
+        "id":135,
         "Q_No":5,
         "Question":"Find LCA of two nodes in BST",
         "Question_link":"https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
         "Solution_link":"https://youtu.be/cX_kPV_foZc"
     },
     {
-        "id":135,
+        "id":136,
         "Q_No":6,
         "Question":"Find the inorder predecessor/successor of a given Key in BST.",
         "Question_link":"https://practice.geeksforgeeks.org/problems/predecessor-and-successor/1",
@@ -1003,56 +1003,56 @@
 ],
 "binarysearchtreeII":[
     {
-        "id":136,
+        "id":137,
         "Q_No":0,
         "Question":"Floor in a BST",
         "Question_link":"https://www.codingninjas.com/codestudio/problems/floor-from-bst_920457?source=youtube&campaign=Striver_Tree_Videos&utm_source=youtube&utm_medium=affiliate&utm_campaign=Striver_Tree_Videos",
         "Solution_link":"https://www.youtube.com/watch?v=xm_W1ub-K-w&list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk&index=43"
     },
     {
-        "id":137,
+        "id":138,
         "Q_No":1,
         "Question":"Ceil in a BST",
         "Question_link":"https://practice.geeksforgeeks.org/problems/implementing-ceil-in-bst/1",
         "Solution_link":"https://www.youtube.com/watch?v=KSsk8AhdOZA&list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk&index=42"
     },
     {
-        "id":138,
+        "id":139,
         "Q_No":2,
         "Question":"Find K-th smallest element in BST",
         "Question_link":"https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
         "Solution_link":"https://youtu.be/9TJYWh0adfk"
     },
     {
-        "id":139,
+        "id":140,
         "Q_No":3,
         "Question":"Find K-th largest element in BST",
         "Question_link":"https://practice.geeksforgeeks.org/problems/kth-largest-element-in-bst/1",
         "Solution_link":"https://youtu.be/9TJYWh0adfk"
     },
     {
-        "id":140,
+        "id":141,
         "Q_No":4,
         "Question":"Find a pair with a given sum in BST",
         "Question_link":"https://leetcode.com/problems/two-sum-iv-input-is-a-bst/",
         "Solution_link":"https://youtu.be/ssL3sHwPeb4"
     },
     {
-        "id":141,
+        "id":142,
         "Q_No":5,
         "Question":"BST iterator",
         "Question_link":"https://leetcode.com/problems/binary-search-tree-iterator/",
         "Solution_link":"https://youtu.be/D2jMcmxU4bs"
     },
     {
-        "id":142,
+        "id":143,
         "Q_No":6,
         "Question":"Size of the largest BST in a Binary Tree",
         "Question_link":"https://leetcode.com/problems/maximum-sum-bst-in-binary-tree/",
         "Solution_link":"https://youtu.be/X0oXMdtUDwo"
     },
     {
-        "id":143,
+        "id":144,
         "Q_No":7,
         "Question":"Serialize and deserialize Binary Tree",
         "Question_link":"https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
@@ -1061,42 +1061,42 @@
 ],
 "binarytreemisc":[
     {
-        "id":144,
+        "id":145,
         "Q_No":0,
         "Question":"Binary Tree to Double Linked List",
         "Question_link":"https://leetcode.com/problems/flatten-binary-tree-to-linked-list/",
         "Solution_link":"https://www.youtube.com/watch?v=sWf7k1x9XR4&list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk&index=39"
     },
     {
-        "id":145,
+        "id":146,
         "Q_No":1,
         "Question":"Find median in a stream of running integers.",
         "Question_link":"https://leetcode.com/problems/find-median-from-data-stream/",
         "Solution_link":"https://www.geeksforgeeks.org/median-of-stream-of-integers-running-integers/"
     },
     {
-        "id":146,
+        "id":147,
         "Q_No":2,
         "Question":"K-th largest element in a stream",
         "Question_link":"https://leetcode.com/problems/kth-largest-element-in-a-stream/",
         "Solution_link":"https://www.youtube.com/watch?v=hOjcdrqMoQ8"
     },
     {
-        "id":147,
+        "id":148,
         "Q_No":3,
         "Question":"Distinct numbers in Window.",
         "Question_link":"https://practice.geeksforgeeks.org/problems/count-distinct-elements-in-every-window/1",
         "Solution_link":"https://www.youtube.com/watch?v=j48e8ac7r20"
     },
     {
-        "id":148,
+        "id":149,
         "Q_No":4,
         "Question":"K-th largest element in an unsorted array.",
         "Question_link":"https://leetcode.com/problems/kth-largest-element-in-an-array/",
         "Solution_link":"https://www.youtube.com/watch?v=XEmy13g1Qxc"
     },
     {
-        "id":149,
+        "id":150,
         "Q_No":5,
         "Question":"Flood-fill Algorithm",
         "Question_link":"https://leetcode.com/problems/flood-fill/",
@@ -1105,84 +1105,84 @@
 ],
 "graphI":[
     {
-        "id":150,
+        "id":151,
         "Q_No":0,
         "Question":"Clone a graph",
         "Question_link":"https://leetcode.com/problems/clone-graph/",
         "Solution_link":"https://www.youtube.com/watch?v=mQeF6bN8hMk"
     },
     {
-        "id":151,
+        "id":152,
         "Q_No":1,
         "Question":"DFS",
         "Question_link":"https://practice.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1",
         "Solution_link":"https://www.youtube.com/watch?v=uDWljP2PGmU&list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&index=7"
     },
     {
-        "id":152,
+        "id":153,
         "Q_No":2,
         "Question":"BFS",
         "Question_link":"https://practice.geeksforgeeks.org/problems/bfs-traversal-of-graph/1",
         "Solution_link":"https://www.youtube.com/watch?v=UeE67iCK2lQ&list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&index=6"
     },
     {
-        "id":153,
+        "id":154,
         "Q_No":3,
         "Question":"Detect A cycle in Undirected Graph using BFS",
         "Question_link":"https://leetcode.com/problems/course-schedule/",
         "Solution_link":"https://www.youtube.com/watch?v=A8ko93TyOns&list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&index=8"
     },
     {
-        "id":154,
+        "id":155,
         "Q_No":4,
         "Question":"Detect A cycle in Undirected Graph using DFS",
         "Question_link":"https://leetcode.com/problems/course-schedule/",
         "Solution_link":"https://www.youtube.com/watch?v=Y9NFqI6Pzd4&list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&index=9"
     },
     {
-        "id":155,
+        "id":156,
         "Q_No":5,
         "Question":"Detect A cycle in a Directed Graph using DFS",
         "Question_link":"https://leetcode.com/problems/course-schedule/",
         "Solution_link":"https://www.youtube.com/watch?v=uzVUw90ZFIg&list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&index=12"
     },
     {
-        "id":156,
+        "id":157,
         "Q_No":6,
         "Question":"Detect A cycle in a Directed Graph using BFS",
         "Question_link":"https://leetcode.com/problems/course-schedule/",
         "Solution_link":"https://www.youtube.com/watch?v=V6GxfKDyLBM&list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&index=15"
     },
     {
-        "id":157,
+        "id":158,
         "Q_No":7,
         "Question":"Topological Sort BFS",
         "Question_link":"https://practice.geeksforgeeks.org/problems/topological-sort/1",
         "Solution_link":"https://www.youtube.com/watch?v=rZv_jHZva34&list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&index=14"
     },
     {
-        "id":158,
+        "id":159,
         "Q_No":8,
         "Question":"Topological Sort DFS",
         "Question_link":"https://practice.geeksforgeeks.org/problems/topological-sort/1",
         "Solution_link":"https://www.youtube.com/watch?v=Yh6EFazXipA&list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&index=13"
     },
     {
-        "id":159,
+        "id":160,
         "Q_No":9,
         "Question":"Number of islands",
         "Question_link":"https://leetcode.com/problems/number-of-islands/",
         "Solution_link":"https://www.youtube.com/watch?v=__98uL6wst8"
     },
     {
-        "id":160,
+        "id":161,
         "Q_No":10,
         "Question":"Bipartite Check using BFS",
         "Question_link":"https://leetcode.com/problems/is-graph-bipartite/",
         "Solution_link":"https://www.youtube.com/watch?v=nbgaEu-pvkU&list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&index=10"
     },
     {
-        "id":161,
+        "id":162,
         "Q_No":11,
         "Question":"Bipartite Check using DFS",
         "Question_link":"https://leetcode.com/problems/is-graph-bipartite/",
@@ -1191,42 +1191,42 @@
 ],
 "graphII":[
     {
-        "id":162,
+        "id":163,
         "Q_No":0,
         "Question":"Strongly Connected Component(using KosaRaju's algo)",
         "Question_link":"https://leetcode.com/problems/maximum-number-of-non-overlapping-substrings/",
         "Solution_link":"https://www.youtube.com/watch?v=V8qIqJxCioo&list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&index=27"
     },
     {
-        "id":163,
+        "id":164,
         "Q_No":1,
         "Question":"Dijkstra’s Algorithm",
         "Question_link":"https://practice.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1",
         "Solution_link":"https://www.youtube.com/watch?v=jbhuqIASjoM&list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&index=18"
     },
     {
-        "id":164,
+        "id":165,
         "Q_No":2,
         "Question":"Bellman-Ford Algo",
         "Question_link":"https://practice.geeksforgeeks.org/problems/distance-from-the-source-bellman-ford-algorithm/0/?fbclid=IwAR2_lL0T84DnciLyzMTQuVTMBOi82nTWNLuXjUgahnrtBgkphKiYk6xcyJU",
         "Solution_link":"https://www.youtube.com/watch?v=75yC1vbS8S8&list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&index=28"
     },
     {
-        "id":165,
+        "id":166,
         "Q_No":3,
         "Question":"Floyd Warshall Algorithm",
         "Question_link":"https://practice.geeksforgeeks.org/problems/implementing-floyd-warshall2042/1",
         "Solution_link":"https://www.youtube.com/watch?v=oNI0rf2P9gE"
     },
     {
-        "id":166,
+        "id":167,
         "Q_No":4,
         "Question":"MST using Prim’s Algo",
         "Question_link":"https://practice.geeksforgeeks.org/problems/minimum-spanning-tree/1",
         "Solution_link":"https://www.youtube.com/watch?v=HnD676J56ak&list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&index=20"
     },
     {
-        "id":167,
+        "id":168,
         "Q_No":5,
         "Question":"MST using Kruskal’s Algo",
         "Question_link":"https://practice.geeksforgeeks.org/problems/minimum-spanning-tree/1",
@@ -1235,49 +1235,49 @@
 ],
 "dynamicprogrammingI":[
     {
-        "id":168,
+        "id":169,
         "Q_No":0,
         "Question":"Max Product Subarray",
         "Question_link":"https://leetcode.com/problems/maximum-product-subarray/",
         "Solution_link":"https://www.youtube.com/watch?v=lXVy6YWFcRM"
     },
     {
-        "id":169,
+        "id":170,
         "Q_No":1,
         "Question":"Longest Increasing Subsequence",
         "Question_link":"https://leetcode.com/problems/longest-increasing-subsequence/",
         "Solution_link":"https://youtu.be/ekcwMsSIzVc"
     },
     {
-        "id":170,
+        "id":171,
         "Q_No":2,
         "Question":"Longest Common Subsequence",
         "Question_link":"https://leetcode.com/problems/longest-common-subsequence/",
         "Solution_link":"https://youtu.be/NPZn9jBrX8U"
     },
     {
-        "id":171,
+        "id":172,
         "Q_No":3,
         "Question":"0-1 Knapsack",
         "Question_link":"https://leetcode.com/problems/ones-and-zeroes/",
         "Solution_link":"https://youtu.be/GqOmJHQZivw"
     },
     {
-        "id":172,
+        "id":173,
         "Q_No":4,
         "Question":"Edit Distance",
         "Question_link":"https://leetcode.com/problems/edit-distance/",
         "Solution_link":"https://youtu.be/fJaKO8FbDdo"
     },
     {
-        "id":173,
+        "id":174,
         "Q_No":5,
         "Question":"Maximum sum increasing subsequence",
         "Question_link":"https://practice.geeksforgeeks.org/problems/maximum-sum-increasing-subsequence4749/1",
         "Solution_link":"https://www.youtube.com/watch?v=R7DrJsTkK8w"
     },
     {
-        "id":174,
+        "id":175,
         "Q_No":6,
         "Question":"Matrix Chain Multiplication",
         "Question_link":"https://practice.geeksforgeeks.org/problems/matrix-chain-multiplication0303/1",
@@ -1286,56 +1286,56 @@
 ],
 "dynamicprogrammingII":[
     {
-        "id":175,
+        "id":176,
         "Q_No":0,
         "Question":"Minimum sum path in the matrix",
         "Question_link":"https://leetcode.com/problems/minimum-path-sum/",
         "Solution_link":"https://youtu.be/_rgTlyky1uQ"
     },
     {
-        "id":176,
+        "id":177,
         "Q_No":1,
         "Question":"Coin change",
         "Question_link":"https://leetcode.com/problems/coin-change/",
         "Solution_link":"https://youtu.be/HgyouUi11zk"
     },
     {
-        "id":177,
+        "id":178,
         "Q_No":2,
         "Question":"Subset Sum",
         "Question_link":"https://leetcode.com/problems/partition-equal-subset-sum/",
         "Solution_link":"https://www.youtube.com/watch?v=fWX9xDmIzRI"
     },
     {
-        "id":178,
+        "id":179,
         "Q_No":3,
         "Question":"Rod Cutting",
         "Question_link":"https://leetcode.com/problems/minimum-cost-to-cut-a-stick/",
         "Solution_link":"https://youtu.be/mO8XpGoJwuo"
     },
     {
-        "id":179,
+        "id":180,
         "Q_No":4,
         "Question":"Egg Dropping",
         "Question_link":"https://practice.geeksforgeeks.org/problems/egg-dropping-puzzle-1587115620/1",
         "Solution_link":"https://www.youtube.com/watch?v=gr2NtY-2QUY"
     },
     {
-        "id":180,
+        "id":181,
         "Q_No":5,
         "Question":"Word Break",
         "Question_link":"https://practice.geeksforgeeks.org/problems/word-break1352/1",
         "Solution_link":"https://www.youtube.com/watch?v=th4OnoGasMU"
     },
     {
-        "id":181,
+        "id":182,
         "Q_No":6,
         "Question":"Palindrome Partitioning (MCM Variation)",
         "Question_link":"https://practice.geeksforgeeks.org/problems/palindromic-patitioning4845/1",
         "Solution_link":"https://youtu.be/_H8V5hJUGd0"
     },
     {
-        "id":182,
+        "id":183,
         "Q_No":7,
         "Question":"Maximum profit in Job scheduling",
         "Question_link":"https://practice.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1",
@@ -1344,49 +1344,49 @@
 ],
 "trie":[
     {
-        "id":183,
+        "id":184,
         "Q_No":0,
         "Question":"Implement Trie (Prefix Tree)",
         "Question_link":"https://leetcode.com/problems/implement-trie-prefix-tree/",
         "Solution_link":"https://www.youtube.com/watch?v=dBGUmUQhjaM&list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp"
     },
     {
-        "id":184,
+        "id":185,
         "Q_No":1,
         "Question":"Implement Trie – 2 (Prefix Tree)",
         "Question_link":"https://bit.ly/3qwT4OL",
         "Solution_link":"https://www.youtube.com/watch?v=K5pcpkEMCN0&list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp&index=2"
     },
     {
-        "id":185,
+        "id":186,
         "Q_No":2,
         "Question":"Longest String with All Prefixes",
         "Question_link":"https://bit.ly/3n3kedU",
         "Solution_link":"https://www.youtube.com/watch?v=AWnBa91lThI&list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp&index=3"
     },
     {
-        "id":186,
+        "id":187,
         "Q_No":3,
         "Question":"Number of Distinct Substrings in a String",
         "Question_link":"https://bit.ly/3ocRQW0",
         "Solution_link":"https://www.youtube.com/watch?v=RV0QeTyHZxo&list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp&index=4"
     },
     {
-        "id":187,
+        "id":188,
         "Q_No":4,
         "Question":"Power Set",
         "Question_link":"https://practice.geeksforgeeks.org/problems/power-set4302/1#",
         "Solution_link":"https://www.youtube.com/watch?v=b7AYbpM5YrE&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=67"
     },
     {
-        "id":188,
+        "id":189,
         "Q_No":5,
         "Question":"Maximum XOR of two numbers in an array",
         "Question_link":"https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/",
         "Solution_link":""
     },
     {
-        "id":189,
+        "id":190,
         "Q_No":6,
         "Question":"Maximum XOR With an Element From Array",
         "Question_link":"https://leetcode.com/problems/maximum-xor-with-an-element-from-array/",
