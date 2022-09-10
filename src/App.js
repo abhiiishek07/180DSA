@@ -16,17 +16,21 @@ import { useDispatch } from "react-redux";
 import { setInitialCart } from "./store/cartSlice";
 import { setInitialBookmark } from "./store/bookmarkSlice";
 import { setInitialNote } from "./store/noteSlice";
+import { setLoading } from "./store/loadingSlice";
 function App() {
   const user = useSelector((state) => state.auth);
   let dispatch = useDispatch();
   const getData = async () => {
+    dispatch(setLoading(true));
     const userRef = doc(db, "users", user[0][1]);
     const docSnap = await getDoc(userRef);
 
     if (docSnap.exists()) {
+      dispatch(setLoading(false));
       dispatch(setInitialCart(docSnap.data().solvedQuestionList));
       dispatch(setInitialBookmark(docSnap.data().bookmarkList));
       dispatch(setInitialNote(docSnap.data().notesList));
+
       console.log("initial states updated");
     } else {
       console.log("User does not exist");

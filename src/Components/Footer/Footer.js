@@ -9,11 +9,13 @@ import { useDispatch } from "react-redux";
 import { updateTheme } from "../../store/themeSlice";
 import themeColor from "../../Data/themeColor.json";
 import BookmarksIcon from "@mui/icons-material/Bookmarks";
+import RotateLeftRoundedIcon from "@mui/icons-material/RotateLeftRounded";
 
 function Footer() {
   const currTheme = useSelector((state) => state.theme);
   const user = useSelector((state) => state.auth);
   const bookmarked = useSelector((state) => state.bookmark);
+  const loading = useSelector((state) => state.loading);
   let isDark = false;
   if (currTheme === "dark") isDark = true;
   let dispatch = useDispatch();
@@ -74,7 +76,13 @@ function Footer() {
                 }}
                 onClick={() => navigate("/bookmarks")}
               />
-              <span>{bookmarked.length > 0 ? bookmarked.length : ""}</span>
+              <span>
+                {bookmarked.length > 0
+                  ? loading
+                    ? "*"
+                    : bookmarked.length
+                  : ""}
+              </span>
             </BookmarkCont>
             <Title
               color={themeColor[currTheme][0].text}

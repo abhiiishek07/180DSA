@@ -4,6 +4,7 @@ import themeReducer from "./themeSlice";
 import noteReducer from "./noteSlice";
 import bookmarkReducer from "./bookmarkSlice";
 import authReducer from "./authSlice";
+import loadingReducer from "./loadingSlice";
 import storage from "redux-persist/lib/storage";
 import {
   persistReducer,
@@ -25,6 +26,7 @@ const reducer = combineReducers({
   note: noteReducer,
   bookmark: bookmarkReducer,
   auth: authReducer,
+  loading: loadingReducer,
 });
 const persistedReducer = persistReducer(persistConfig, reducer);
 

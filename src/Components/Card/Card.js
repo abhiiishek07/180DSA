@@ -2,10 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import RotateLeftRoundedIcon from "@mui/icons-material/RotateLeftRounded";
 const Card = (props) => {
   const navigate = useNavigate();
   const navi = props.pathName;
   const items = useSelector((state) => state.cart);
+  const loading = useSelector((state) => state.loading);
   const fun = () => {
     navigate("/topic/" + navi);
   };
@@ -13,7 +15,7 @@ const Card = (props) => {
     let arr = items.filter((ele) => ele >= a && ele <= b);
     return arr.length;
   };
-
+  console.log(totalSolved(props.start, props.end));
   return (
     <Wrapper bgColor={props.bgColor}>
       <div className="card_container">
@@ -21,13 +23,16 @@ const Card = (props) => {
       </div>
       <Descrip>
         {" "}
-        Total solved : {totalSolved(props.start, props.end)}
-        {" / "}
-        {props.totalQ}
+        Total solved :{" "}
+        {loading ? (
+          <RotateLeftRoundedIcon />
+        ) : (
+          totalSolved(props.start, props.end) + " / " + props.totalQ
+        )}
       </Descrip>
       <BtnCont>
         <Button onClick={fun}>
-          {items.some((value) => value >= props.start && value <= props.end)
+          {totalSolved(props.start, props.end) > 0
             ? "CONTINUE"
             : "START SOLVING"}
         </Button>
@@ -41,6 +46,7 @@ const Wrapper = styled.div`
   width: 15rem;
   min-height: 20vh;
   background-color: ${(props) => props.bgColor};
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   /* #0059b2; */
   border-radius: 0.5rem;

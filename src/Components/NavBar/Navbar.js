@@ -16,6 +16,7 @@ import themeColor from "../../Data/themeColor.json";
 import { useNavigate } from "react-router-dom";
 import { doc, updateDoc, arrayUnion } from "firebase/firestore";
 import { db } from "../../Firebase/FirebaseAuth";
+import RotateLeftRoundedIcon from "@mui/icons-material/RotateLeftRounded";
 
 function Navbar() {
   const items = useSelector((state) => state.cart);
@@ -24,6 +25,7 @@ function Navbar() {
   let navigate = useNavigate();
   const user = useSelector((state) => state.auth);
   const userRef = doc(db, "users", user[0][1]);
+  const loading = useSelector((state) => state.loading);
 
   //function to find the random Question
   const findRandomQ = () => {
@@ -102,7 +104,7 @@ function Navbar() {
   const fun = () => {
     findRandomQ();
   };
-
+  console.log("loadiiiiiiiiii", loading);
   return (
     <Grid
       container
@@ -138,7 +140,8 @@ function Navbar() {
       <Grid item lg={3} md={12} sm={12} xs={12}>
         <Wrapper>
           <Title color={themeColor[currTheme][0].text} paddingLeft="2.25rem">
-            Total Solved : {items.length} / 191
+            Total Solved :{" "}
+            {loading ? <RotateLeftRoundedIcon /> : items.length + " / 191"}
           </Title>
         </Wrapper>
       </Grid>
