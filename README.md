@@ -1,6 +1,6 @@
 # This web app tracker is based on SDE sheet by Raj Vikramaditya aka Striver. Striver's sde sheet has helped thousands of student in thier interview prepartion
 
-![Homepage](<../180DSA/public/Assests/Screenshot (27).png>)
+# ![Homepage](</public/Assests/Screenshot (27).png>)
 
 # Key features:-
 
