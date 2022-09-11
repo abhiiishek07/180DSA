@@ -22,13 +22,13 @@ const Card = (props) => {
         <Title>{props.topicName}</Title>
       </div>
       <Descrip>
-        {" "}
-        Total solved :{" "}
+        Total Solved :{" "}
         {loading ? (
           <RotateLeftRoundedIcon />
         ) : (
-          totalSolved(props.start, props.end) + " / " + props.totalQ
-        )}
+          totalSolved(props.start, props.end)
+        )}{" "}
+        / {props.totalQ}
       </Descrip>
       <BtnCont>
         <Button onClick={fun}>

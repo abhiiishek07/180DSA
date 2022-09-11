@@ -140,8 +140,8 @@ function Navbar() {
       <Grid item lg={3} md={12} sm={12} xs={12}>
         <Wrapper>
           <Title color={themeColor[currTheme][0].text} paddingLeft="2.25rem">
-            Total Solved :{" "}
-            {loading ? <RotateLeftRoundedIcon /> : items.length + " / 191"}
+            Total Solved : {loading ? <RotateLeftRoundedIcon /> : items.length}{" "}
+            / 191
           </Title>
         </Wrapper>
       </Grid>

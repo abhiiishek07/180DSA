@@ -9,7 +9,6 @@ import { useDispatch } from "react-redux";
 import { updateTheme } from "../../store/themeSlice";
 import themeColor from "../../Data/themeColor.json";
 import BookmarksIcon from "@mui/icons-material/Bookmarks";
-import RotateLeftRoundedIcon from "@mui/icons-material/RotateLeftRounded";
 
 function Footer() {
   const currTheme = useSelector((state) => state.theme);
