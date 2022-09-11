@@ -1,17 +1,24 @@
-# Striver sde sheet has helped thousands of student in their interview preparation. This website is based on the sde sheet.
+# This web app tracker is based on SDE sheet by Raj Vikramaditya aka Striver. Striver's sde sheet has helped thousands of student in thier interview prepartion
+
+![](<../../Pictures/Screenshots/Screenshot%20(26).png>)
+
 # Key features:-
-  * keep track of questions solved
-  * which topic has been started
-  * user can Add notes to each question
-  * Bookmark any important question 
-  * Reset the progress
- # This website is completely built on REACT JS
-   * frontend- react js
-   * state management- REDUX
-   * Local storage
-   
-   
-   
+
+- keep track of questions solved
+- which topic has been started
+- keep track of problems solved in each topic
+- Add notes to each problem
+- Bookmark any important problem
+- dark & light theme
+- Reset the progress
+- data is persistent
+
+# This website is completely built on REACT JS
+
+- frontend- react js
+- state management- REDUX
+- Authentication & Storage- Firebase/Firestore
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
