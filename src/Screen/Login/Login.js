@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import GoogleButton from "react-google-button";
 import styled from "styled-components";
-import { signInWithGoogle } from "../../Firebase/FirebaseAuth";
+import { signInWithGoogle, signInAsGuest } from "../../Firebase/FirebaseAuth";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../../store/authSlice";
@@ -34,11 +34,11 @@ function Login() {
         });
     }
   };
+
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         dispatch(addUser([user.displayName, user.uid]));
-
         addNewUser(user.uid);
       } else {
         dispatch(removeUser([]));
@@ -61,6 +61,10 @@ function Login() {
       {View}
 
       <GoogleButton onClick={signInWithGoogle} />
+      <br />
+      <br />
+      <br />
+      <Anon onClick={signInAsGuest}>Sign In as guest</Anon>
     </Wrapper>
   );
 }
@@ -70,6 +74,11 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+`;
+const Anon = styled.h3`
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
 `;
 
 export default Login;

@@ -5,6 +5,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   signOut,
+  signInAnonymously,
 } from "firebase/auth";
 const firebaseConfig = {
   apiKey: `${process.env.REACT_APP_apiKey}`,
@@ -25,5 +26,8 @@ export const signInWithGoogle = () => {
 };
 export const signOutFromGoogle = () => {
   signOut(auth, provider);
+};
+export const signInAsGuest = () => {
+  signInAnonymously(auth, provider);
 };
 export const db = getFirestore(app);
