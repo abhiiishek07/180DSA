@@ -27,7 +27,7 @@ export const signInWithGoogle = () => {
 export const signOutFromGoogle = () => {
   signOut(auth, provider);
 };
-export const signInAsGuest = () => {
-  signInAnonymously(auth, provider);
-};
+// export const signInAsGuest = () => {
+//   signInAnonymously(auth, provider);
+// };
 export const db = getFirestore(app);

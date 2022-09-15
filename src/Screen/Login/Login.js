@@ -61,10 +61,6 @@ function Login() {
       {View}
 
       <GoogleButton onClick={signInWithGoogle} />
-      <br />
-      <br />
-      <br />
-      <Anon onClick={signInAsGuest}>Sign In as guest</Anon>
     </Wrapper>
   );
 }
