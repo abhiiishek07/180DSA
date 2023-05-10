@@ -42,7 +42,7 @@ function Footer() {
           <Wrapper Padding="3rem" Margin="0.7rem">
             <Name color={themeColor[currTheme][0].text}>
               <span> નમસ્તે </span> 🙏
-              <img src={user[0][2]} alt="/" /> {user[0][0]}
+              {user[0][0]}
             </Name>
           </Wrapper>
         </Grid>
