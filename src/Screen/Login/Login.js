@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import GoogleButton from "react-google-button";
 import styled from "styled-components";
-import { signInWithGoogle, signInAsGuest } from "../../Firebase/FirebaseAuth";
+import { signInWithGoogle } from "../../Firebase/FirebaseAuth";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../../store/authSlice";
@@ -9,6 +9,10 @@ import { useLottie } from "lottie-react";
 import robotHi from "../../Lottie/robotHi.json";
 import { setDoc, doc, getDoc } from "firebase/firestore";
 import { db } from "../../Firebase/FirebaseAuth";
+import { setLoading } from "../../store/loadingSlice";
+import { setInitialCart } from "../../store/cartSlice";
+import { setInitialBookmark } from "../../store/bookmarkSlice";
+import { setInitialNote } from "../../store/noteSlice";
 
 function Login() {
   let dispatch = useDispatch();
@@ -23,6 +27,10 @@ function Login() {
     const docSnap = await getDoc(userRef);
     if (docSnap.exists()) {
       console.log("Document already exist");
+      dispatch(setLoading(false));
+      dispatch(setInitialCart(docSnap.data().solvedQuestionList));
+      dispatch(setInitialBookmark(docSnap.data().bookmarkList));
+      dispatch(setInitialNote(docSnap.data().notesList));
     } else {
       console.log("No such document!");
       setDoc(userRef, data)
@@ -38,7 +46,7 @@ function Login() {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        dispatch(addUser([user.displayName, user.uid]));
+        dispatch(addUser([user.displayName, user.uid, user.photoURL]));
         addNewUser(user.uid);
       } else {
         dispatch(removeUser([]));
@@ -70,11 +78,6 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-`;
-const Anon = styled.h3`
-  text-decoration: underline;
-  color: blue;
-  cursor: pointer;
 `;
 
 export default Login;

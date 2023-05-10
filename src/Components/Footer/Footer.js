@@ -41,7 +41,8 @@ function Footer() {
         <Grid item lg={9.5} md={6} sm={12} xs={12}>
           <Wrapper Padding="3rem" Margin="0.7rem">
             <Name color={themeColor[currTheme][0].text}>
-              <span> નમસ્તે </span> 🙏 {user[0][0]}
+              <span> નમસ્તે </span> 🙏
+              <img src={user[0][2]} alt="/" /> {user[0][0]}
             </Name>
           </Wrapper>
         </Grid>
@@ -127,6 +128,10 @@ const Wrapper = styled.div`
   margin-top: 0.5rem;
   a {
     text-decoration: none;
+  }
+  img {
+    border-radius: 50%;
+    height: 32px;
   }
 `;
 const Name = styled.h1`
