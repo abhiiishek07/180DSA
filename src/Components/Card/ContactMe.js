@@ -2,8 +2,11 @@ import React from "react";
 import { useLottie } from "lottie-react";
 import animationData from "../../Lottie/yoga-and-code.json";
 import styled from "styled-components";
-import { SocialMediaIconsReact } from "social-media-icons-react";
 import { Grid } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 function ContactMe() {
   const defaultOptions = {
     loop: true,
@@ -27,38 +30,49 @@ function ContactMe() {
               I'm Abhishe<span className="k">k</span>.
             </Title>
             <Social>
-              <SocialMediaIconsReact
-                borderColor="rgba(0,0,0,0.25)"
-                icon="twitter"
-                iconColor="black"
-                backgroundColor="rgba(26,166,233,1)"
-                url="https://twitter.com/abhiiishek07"
-                size="48"
-              />
-              <SocialMediaIconsReact
-                borderColor="rgba(0,0,0,0.25)"
-                icon="instagram"
-                iconColor="black"
-                backgroundColor="rgba(26,166,233,1)"
-                url="https://www.instagram.com/abhiiishek07/"
-                size="48"
-              />
-              <SocialMediaIconsReact
-                borderColor="rgba(0,0,0,0.25)"
-                icon="linkedin"
-                iconColor="black"
-                backgroundColor="rgba(26,166,233,1)"
-                url="https://www.linkedin.com/in/abhishek-k-96abb6210/"
-                size="48"
-              />
-              <SocialMediaIconsReact
-                borderColor="rgba(0,0,0,0.25)"
-                icon="github"
-                iconColor="black"
-                backgroundColor="rgba(26,166,233,1)"
-                url="https://github.com/abhiiishek07"
-                size="48"
-              />
+              <IconButton
+                href="https://www.linkedin.com/in/abhishek-k-96abb6210/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LinkedInIcon
+                  style={{
+                    color: "#1AA6E9",
+                    cursor: "pointer",
+                    margin: "0rem",
+                    fontSize: "7vh",
+                  }}
+                />
+              </IconButton>
+              <IconButton
+                href="https://github.com/abhiiishek07"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GitHubIcon
+                  style={{
+                    color: "#1AA6E9",
+                    cursor: "pointer",
+                    margin: "0rem",
+                    // height: ,
+                    fontSize: "7vh",
+                  }}
+                />
+              </IconButton>
+              <IconButton
+                href="https://twitter.com/abhiiishek07"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <TwitterIcon
+                  style={{
+                    color: "#1AA6E9",
+                    cursor: "pointer",
+                    margin: "0rem",
+                    fontSize: "7vh",
+                  }}
+                />
+              </IconButton>
             </Social>
           </AboutMe>
         </Grid>
